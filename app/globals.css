@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,6 +16,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+main {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,4 +28,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.hover-container {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
+  }
 }

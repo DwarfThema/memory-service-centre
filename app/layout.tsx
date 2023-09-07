@@ -1,8 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, VT323 } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const mainFont = VT323({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "M.S.C",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={mainFont.className}>{children}</body>
     </html>
   );
 }
