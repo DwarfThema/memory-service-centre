@@ -16,7 +16,7 @@ export default function WebLayout({ isHome = false }: { isHome?: boolean }) {
         <Link href={"/web/home"}>
           <Image
             src={LogoWitchTurnAround}
-            className="absolute left-64 top-52 w-24"
+            className="absolute left-[10%] top-[15%] w-[6%]"
             alt="home"
           />
         </Link>
