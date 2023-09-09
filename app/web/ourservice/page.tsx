@@ -13,12 +13,12 @@ import WebLayout from "../src/webLayout";
 export default function Home() {
   return (
     <main className="w-screen h-screen bg-white flex items-center justify-center flex-col">
-      <WebLayout isHome={true} />
+      <WebLayout isHome={false} />
 
       <div className="flex flex-col items-center w-1/4">
         <Image src={LogoWitchTurnAround} className="w-1/6 h-fit" alt="witch" />
         <Image src={Logo} className="w-full h-fit" alt="logo" />
-        <div className="mt-7 w-[620px] h-[450px] text-[20px] bg-[url('/textures/web-home/Base.png')] bg-contain bg-no-repeat flex flex-col justify-center items-center text-center ">
+        <div className="mt-7 w-[620px] h-[450px] bg-[url('/textures/web-home/Base.png')] bg-contain bg-no-repeat flex flex-col justify-center items-center text-center ">
           <div className="mr-3 flex flex-col justify-center items-center">
             <div className="flex">
               <Link href={"/web/about"}>

@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={mainFont.className}>{children}</body>
+      <body className={"font-dos"}>{children}</body>
     </html>
   );
 }

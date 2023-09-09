@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         dos: ["DOSGothic"],
+        vt: ['VT323']
       },
     },
   },

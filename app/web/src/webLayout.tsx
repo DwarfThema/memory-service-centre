@@ -1,16 +1,24 @@
-import Frame from "../../../public/textures/monitor_frame.png";
+import Frame from "../../../public/textures/frame_1.png";
 import LogoWitchTurnAround from "../../../public/textures/logo_witch_turnAround.gif";
+import Notice from "../../../public/textures/notice.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import NoticeView from "./notice";
 
-export default function WebLayout({ isHome = false }: { isHome?: boolean }) {
+export default function WebLayout({ isHome = true, isNotice = true }: { isHome?: boolean, isNotice?: boolean }) {
+  
+  const [isNoticeView, setNoticeView] = useState(false);
+  
   return (
     <>
       <Image
         src={Frame}
         className="w-screen h-screen z-50 absolute pointer-events-none"
         alt="frame"
-      />
+      >
+        
+      </Image>
 
       {isHome ? null : (
         <Link href={"/web/home"}>
@@ -21,6 +29,20 @@ export default function WebLayout({ isHome = false }: { isHome?: boolean }) {
           />
         </Link>
       )}
+
+      {isNotice ? (<button onClick={()=>{
+        setNoticeView((prev) => !prev)
+      }}>
+        <Image src={Notice}
+            className="absolute left-[10%] bottom-[15%] w-[4%]"
+            alt="notice"/>
+      </button>) : null
+      }
+
+     {isNoticeView ? 
+     
+<div onClick={()=>{setNoticeView((prev)=>!prev)}} className="absolute w-screen h-screen bg-black bg-opacity-60 z-50 flex items-center justify-center cursor-pointer"><NoticeView  /></div>
+       : null} 
       <div
         className="z-10 pointer-events-none w-screen h-screen absolute"
         style={{
