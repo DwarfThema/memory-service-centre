@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"font-dos"}>{children}</body>
+      <body className={"font-dos scrollbar-hide bg-white"}>{children}</body>
     </html>
   );
 }

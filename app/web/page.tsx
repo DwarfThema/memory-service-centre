@@ -6,8 +6,7 @@ import LogoWitchTurnAround from "../../public/textures/logo_witch_turnAround.gif
 import Holder from "../../public/textures/main_Press Start.png";
 import Link from "next/link";
 import WebLayout from "./src/webLayout";
-import {  VT323 } from "next/font/google";
-
+import { VT323 } from "next/font/google";
 
 const mainFont = VT323({
   weight: "400",
@@ -24,29 +23,21 @@ export default function Web() {
         <Image src={Logo} className="w-full h-fit" alt="logo" />
         <div className="flex flex-col items-center text-center ">
           <div className="mt-14 text-[40px]">
-            <span className={mainFont.className}>
-            Welcome to M.S.C
-            </span>
-            </div>
+            <span className={mainFont.className}>Welcome to M.S.C</span>
+          </div>
           <Link
             href={"/web/home"}
             className="flex items-center mt-1 cursor-pointer"
           >
             <Image src={Holder} className="w-[60px] h-fit " alt="|" />
             <div className=" text-[62px] ">
-              <span className={mainFont.className}>
-              PRESS START
-              </span>
-              </div>
+              <span className={mainFont.className}>PRESS START</span>
+            </div>
             <Image src={Holder} className="w-[60px] h-fit " alt="|" />
           </Link>
           <div className="text-[26px]">
-            <span className={mainFont.className}>
-
-            © dasomsong 2023
-            </span>
-            
-            </div>
+            <footer className={mainFont.className}>© dasomsong 2023</footer>
+          </div>
         </div>
       </div>
     </main>

@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-[20px]">© dasomsong 2023</div>
+      <footer className="text-[20px]">© dasomsong 2023</footer>
     </main>
   );
 }
