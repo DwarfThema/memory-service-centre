@@ -70,7 +70,7 @@ export default function Init() {
               luminanceSmoothing={1.5}
               intensity={0.7}
             />
-            <Noise premultiply blendFunction={BlendFunction.ADD} opacity={10} />
+            <Noise premultiply blendFunction={BlendFunction.ADD} opacity={2} />
             <Vignette eskil={false} offset={0.01} darkness={1} />
             <Glitch delay={glitchValue} />
             <Pixelation granularity={1} />

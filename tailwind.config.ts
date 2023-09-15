@@ -15,9 +15,10 @@ const config: Config = {
       },
       fontFamily: {
         dos: ["DOSGothic"],
+        vt: ["VT323"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
 export default config;

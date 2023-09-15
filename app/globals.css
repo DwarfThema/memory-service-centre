@@ -1,7 +1,15 @@
-@import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DOSGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,6 +24,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 main {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
 }
