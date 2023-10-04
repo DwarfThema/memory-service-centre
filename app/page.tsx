@@ -17,6 +17,7 @@ import { Suspense, useEffect, useRef } from "react";
 import { SpotLight, Vector2 } from "three";
 import Monitor from "./src/monitor";
 import { Canvas } from "@react-three/fiber";
+import { useControls } from "leva";
 
 export default function Init() {
   const glitchValue = new Vector2(3, 3);
@@ -30,13 +31,8 @@ export default function Init() {
   }, []);
 
   return (
-    <main className="w-screen h-screen bg-black">
-      <Canvas
-        camera={{
-          fov: 40,
-          position: [1.43, 1.75, 0.7],
-        }}
-      >
+    <main className="w-screen h-screen absolute bg-black">
+      <Canvas className="w-screen h-screen absolute">
         <Suspense fallback={null}>
           <Environment preset="night" />
           <ambientLight intensity={0.01} />
@@ -63,7 +59,7 @@ export default function Init() {
             <planeGeometry attach="geometry" args={[5, 5]} />
             <meshStandardMaterial attach="material" color="#383838" />
           </mesh>
-          <FixedCamera position={[1.43, 1.75, 0.7]} lookat={[0, 0.3, 0.1]} />
+          <FixedCamera position={[3.3, 3, 1.2]} lookat={[-0.8, -0.8, -0.37]} />
           <EffectComposer>
             <Bloom
               luminanceThreshold={0.2}

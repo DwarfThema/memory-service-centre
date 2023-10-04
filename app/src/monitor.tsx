@@ -6,11 +6,11 @@ import { Material, Mesh, MeshStandardMaterial } from "three";
 
 export default function Monitor({ href }: { href: string }) {
 
-const [emissiveVal, setEmissiveVal] = useState(true);
+  const [emissiveVal, setEmissiveVal] = useState(true);
 
   const router = useRouter();
 
-  const {scene} = useGLTF("/models/monitor.gltf");
+  const { scene } = useGLTF("/models/monitor.gltf");
 
   const Meshs: Mesh[] = [];
   scene.traverse((obj) => {
@@ -19,29 +19,22 @@ const [emissiveVal, setEmissiveVal] = useState(true);
     }
   });
   const { nodes } = useGraph(scene);
-  const monitorMesh = nodes.Monitor as Mesh
-  const monitorMtl = monitorMesh.material as MeshStandardMaterial  
+  const monitorMesh = nodes.Monitor as Mesh;
+  const monitorMtl = monitorMesh.material as MeshStandardMaterial;
 
-  useFrame(()=>{
-console.log(monitorMtl);
-
-
-
-    if(monitorMtl.envMapIntensity <= -5){
-      setEmissiveVal(true)
-    }else if(monitorMtl.envMapIntensity >= 5){
-      setEmissiveVal(false)
+  useFrame(() => {
+    if (monitorMtl.envMapIntensity <= -5) {
+      setEmissiveVal(true);
+    } else if (monitorMtl.envMapIntensity >= 5) {
+      setEmissiveVal(false);
     }
 
-
-    if(emissiveVal){
-      monitorMtl.envMapIntensity += 1
-    }else{
-      monitorMtl.envMapIntensity -= 1
+    if (emissiveVal) {
+      monitorMtl.envMapIntensity += 1;
+    } else {
+      monitorMtl.envMapIntensity -= 1;
     }
-    
-    
-  })
+  });
   return (
     <>
       {Meshs.map((mesh, index) => (

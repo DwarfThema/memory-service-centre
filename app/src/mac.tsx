@@ -1,6 +1,4 @@
 import { useGLTF } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
-import { useEffect } from "react";
 import { Mesh } from "three";
 
 export default function Mac({ ...props }) {
