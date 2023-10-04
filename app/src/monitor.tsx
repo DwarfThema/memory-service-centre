@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Material, Mesh, MeshStandardMaterial } from "three";
 
 export default function Monitor({ href }: { href: string }) {
+
   const [emissiveVal, setEmissiveVal] = useState(true);
 
   const router = useRouter();
