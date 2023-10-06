@@ -1,4 +1,4 @@
-import { useGLTF } from "@react-three/drei";
+import { Gltf, useGLTF } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 import { Mesh } from "three";
 
@@ -13,16 +13,11 @@ export default function Table() {
 
   return (
     <>
-      {deskSet.map((src, index) => {
-        src.scene.traverse((obj) => {
-          if (obj instanceof Mesh) {
-            obj.receiveShadow = true;
-            obj.castShadow = true;
-          }
-        });
-
-        return <primitive key={index} object={src.scene} />;
-      })}
+      <Gltf src="models/candle.gltf" receiveShadow castShadow />
+      <Gltf src="models/chair.gltf" receiveShadow castShadow />
+      <Gltf src="models/desk.gltf" receiveShadow castShadow />
+      <Gltf src="models/keyboard.gltf" receiveShadow castShadow />
+      <Gltf src="models/pill.gltf" receiveShadow castShadow />
     </>
   );
 }
