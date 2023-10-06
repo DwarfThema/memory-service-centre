@@ -19,6 +19,12 @@ const mainFont = VT323({
 export default function Web() {
   const [url, setUrl] = useState("");
 
+  const [audio, setaudio] = useState<HTMLAudioElement>();
+
+  useEffect(() => {
+    setaudio(new Audio("/01 MSC_main theme.mp3"));
+  }, []);
+
   return (
     <main className="w-screen h-screen flex items-center justify-center">
       <WhiteNoise />
@@ -38,6 +44,11 @@ export default function Web() {
               className="flex items-center mt-1 cursor-pointer"
               onClick={() => {
                 setUrl("/web/home");
+                if (audio) {
+                  audio.loop = true;
+                  audio.volume = 0.2;
+                  audio?.play();
+                }
               }}
             >
               <Image src={Holder} className="w-[60px] h-fit " alt="|" />
