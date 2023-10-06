@@ -11,7 +11,7 @@ export default function Home() {
   const [url, setUrl] = useState("");
 
   return (
-    <main className="w-screen h-screen bg-white flex items-center flex-col">
+    <main className="w-screen h-screen flex items-center flex-col">
       <WebLayout isHome={false} url={url}>
         <div className="flex flex-col items-center w-[60%] mt-36">
           <Image src={SouvenirShop} className="w-[12%]" alt="witch" />

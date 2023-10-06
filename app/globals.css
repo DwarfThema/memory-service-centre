@@ -24,11 +24,20 @@ main {
 body {
   color: rgb(var(--foreground-rgb));
   background: black;
+  user-select: none;
 }
 
 main {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
 }
 
 .hover-container {
