@@ -17,6 +17,7 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+
 main {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
 }
@@ -24,6 +25,19 @@ main {
 body {
   color: rgb(var(--foreground-rgb));
   background: black;
+  user-select: none;
+}
+main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
 }
 
 .hover-container {

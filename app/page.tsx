@@ -3,7 +3,12 @@
 import Table from "./src/table";
 import Mac from "./src/mac";
 import FixedCamera from "./src/fixedCamera";
-import { Environment } from "@react-three/drei";
+import {
+  BakeShadows,
+  Environment,
+  Loader,
+  SoftShadows,
+} from "@react-three/drei";
 import {
   Bloom,
   EffectComposer,
@@ -32,18 +37,18 @@ export default function Init() {
 
   return (
     <main className="w-screen h-screen absolute bg-black">
-      <Canvas className="w-screen h-screen absolute">
+      <Loader />
+      <Canvas shadows className="w-screen h-screen absolute">
         <Suspense fallback={null}>
+          <BakeShadows />
+          <SoftShadows size={10} focus={0} samples={20} />
           <Environment preset="night" />
-          <ambientLight intensity={0.01} />
           <spotLight
             ref={spotligtRef}
             position={[0, 2, 0]}
-            shadow-mapSize-width={7680}
-            shadow-mapSize-height={7680}
-            shadow-bias={-0.0005}
             castShadow
-            intensity={0.01}
+            receiveShadow
+            intensity={5}
           />
           <group position={[0.75, 0, 0.3]}>
             <Mac />

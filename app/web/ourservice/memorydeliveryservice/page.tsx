@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import mainPhoto from "../../../../public/textures/ourService/Artificial hippocampus.png";
+import ArtificialHippocampus from "../../../../public/textures/ourService/Artificial hippocampus.png";
 import WebLayout from "../../src/webLayout";
 import Reservation from "../../src/reservation";
 import { useState } from "react";
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
           <h1 className="mt-10 w-full flex">
             <Image
-              src={mainPhoto}
+              src={ArtificialHippocampus}
               className="w-1/3 "
               alt="ArtificialHippocampus"
             />
