@@ -23,6 +23,7 @@ import { SpotLight, Vector2 } from "three";
 import Monitor from "./src/monitor";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
+import LoadingScreen from "./src/loadingScreen";
 
 export default function Init() {
   const glitchValue = new Vector2(3, 3);
@@ -37,7 +38,7 @@ export default function Init() {
 
   return (
     <main className="w-screen h-screen absolute bg-black">
-      <Loader />
+      <LoadingScreen />
       <Canvas shadows className="w-screen h-screen absolute">
         <Suspense fallback={null}>
           <BakeShadows />
