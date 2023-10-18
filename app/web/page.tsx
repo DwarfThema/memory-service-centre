@@ -28,7 +28,7 @@ export default function Web() {
   return (
     <main className="w-screen h-screen flex items-center justify-center">
       <WhiteNoise />
-      <WebLayout isHome={true} isNotice={false} url={url}>
+      <WebLayout isHome={true} isNotice={false} main={true} url={url}>
         <div className="flex flex-col items-center justify-center w-1/2 ">
           <Image
             src={LogoWitchTurnAround}

@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, VT323 } from "next/font/google";
+import { RecoilRoot } from "recoil";
+import RecoilRootProvider from "./recoilRootProvider";
 
 const mainFont = VT323({
   weight: "400",
@@ -19,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"font-dos scrollbar-hide bg-white"}>{children}</body>
+      <body className={"font-dos scrollbar-hide bg-white"}>
+        <RecoilRootProvider>{children}</RecoilRootProvider>
+      </body>
     </html>
   );
 }

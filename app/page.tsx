@@ -8,6 +8,7 @@ import {
   Environment,
   Loader,
   SoftShadows,
+  useCursor,
 } from "@react-three/drei";
 import {
   Bloom,
@@ -18,12 +19,13 @@ import {
   Vignette,
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { SpotLight, Vector2 } from "three";
 import Monitor from "./src/monitor";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useControls } from "leva";
 import LoadingScreen from "./src/loadingScreen";
+import { RecoilRoot } from "recoil";
 
 export default function Init() {
   const glitchValue = new Vector2(3, 3);
