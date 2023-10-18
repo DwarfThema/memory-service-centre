@@ -173,11 +173,12 @@ export default function Home() {
                   within the center for 5 years. If memory transplantation is
                   not received within this period, the gifted memories will be
                   deleted from storage. When transferring received memories, a
-                  "memory equivalence test" is conducted by contrasting existing
-                  memories with memories after the procedure, after ensuring
-                  there are no issues during the procedure through brain
-                  imaging. Memory transplantation utilizes the electric
-                  stimulation device from the CE certified NET-X8 series.
+                  &quot;memory equivalence test&quot; is conducted by
+                  contrasting existing memories with memories after the
+                  procedure, after ensuring there are no issues during the
+                  procedure through brain imaging. Memory transplantation
+                  utilizes the electric stimulation device from the CE certified
+                  NET-X8 series.
                 </span>
                 <span className="mt-10 block">
                   <span className="font-extrabold block ">

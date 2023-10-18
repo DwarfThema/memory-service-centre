@@ -142,14 +142,14 @@ export default function Home() {
                 rare and incurable diseases where appropriate treatments have
                 not yet been discovered, patients cannot rely on drugs anymore.
                 In such cases, it is necessary to consider an approach that can
-                improve patients' symptoms through an appropriate placebo
+                improve patients&apos; symptoms through an appropriate placebo
                 effect. The placebo effect interacts with actual therapeutic
                 effects, sometimes triggering psychological and physiological
                 changes. Selective memory manipulation is fundamentally verified
                 through brain imaging to ensure there are no issues during the
                 procedure. It involves comparing existing memories with memories
-                after the procedure through "memory equivalence testing," which
-                is conducted after passing this process.
+                after the procedure through &quot;memory equivalence
+                testing&quot; which is conducted after passing this process.
               </span>
               <div className="mt-10">
                 <span>
