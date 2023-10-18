@@ -1,12 +1,12 @@
-import { useFBO, useGLTF } from "@react-three/drei";
+import { useCursor, useGLTF } from "@react-three/drei";
 import { useFrame, useGraph, useLoader } from "@react-three/fiber";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Material, Mesh, MeshStandardMaterial } from "three";
 
 export default function Monitor({ href }: { href: string }) {
-
   const [emissiveVal, setEmissiveVal] = useState(true);
+  const [cursor, setCursor] = useState(true);
 
   const router = useRouter();
 
@@ -35,6 +35,7 @@ export default function Monitor({ href }: { href: string }) {
       monitorMtl.envMapIntensity -= 1;
     }
   });
+  useCursor(cursor);
   return (
     <>
       {Meshs.map((mesh, index) => (
@@ -43,6 +44,8 @@ export default function Monitor({ href }: { href: string }) {
           geometry={mesh.geometry}
           material={mesh.material}
           receiveShadow
+          onPointerOver={() => setCursor(true)}
+          onPointerOut={() => setCursor(false)}
           onClick={() => {
             router.push(href);
           }}

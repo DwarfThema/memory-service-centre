@@ -6,6 +6,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import NoticeView from "./notice";
 import ScreenTransition from "./screenTransition";
+import { useRecoilState } from "recoil";
+import langState from "./atom";
 
 export default function WebLayout({
   children,
@@ -20,6 +22,8 @@ export default function WebLayout({
   main?: boolean;
   url?: string;
 }) {
+  const [lang, setLang] = useRecoilState(langState);
+
   const [isNoticeView, setNoticeView] = useState(false);
   const [homeUrl, setHomeUrl] = useState("");
   const [coverValue, setCoverValue] = useState(3);
@@ -34,11 +38,6 @@ export default function WebLayout({
       }, 70);
     }
   }, [coverValue]);
-
-  useEffect(() => {
-    console.log("?");
-  }, [url]);
-
   return (
     <>
       <Image
@@ -62,6 +61,28 @@ export default function WebLayout({
               className="fixed left-[10%] top-[15%] w-[6%]"
               alt="home"
             />
+          </div>
+        )}
+
+        {main ? null : (
+          <div className="fixed text-center right-[15%] top-[15%] flex font-bold text-2xl">
+            <div
+              onClick={() => {
+                setLang(true);
+              }}
+              className={`${lang ? "text-[#AD2584]" : null}  cursor-pointer`}
+            >
+              kr
+            </div>
+            <div>&nbsp;/&nbsp;</div>
+            <div
+              onClick={() => {
+                setLang(false);
+              }}
+              className={`${lang ? null : "text-[#AD2584]"} cursor-pointer`}
+            >
+              en
+            </div>
           </div>
         )}
 
