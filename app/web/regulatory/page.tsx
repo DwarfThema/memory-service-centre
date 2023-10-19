@@ -242,7 +242,7 @@ export default function Home() {
                           </ul>
                         </div>
                         <span className="font-extrabold text-[20px] block py-1 mt-3">
-                          잠깐만요!
+                          잠깐만요 !
                         </span>
                         <div className="text-[17px] bg-white px-10  py-3">
                           기억 조작 서비스 결제 후 MM 코드를 받으셨나요? 받지
@@ -255,7 +255,7 @@ export default function Home() {
                         </div>
 
                         <span className="font-extrabold text-[20px] block py-1 mt-3">
-                          잠깐만요!
+                          잠깐만요 !
                         </span>
                         <div className="text-[17px] bg-white px-10 py-3">
                           기억 시술사의 ID 카드를 확인하셨나요? 시술 전에
@@ -268,9 +268,6 @@ export default function Home() {
                       </>
                     ) : tab3State ? (
                       <>
-                        <span className="font-extrabold text-[30px]">
-                          MMR 이란?
-                        </span>
                         <br />
                         <br />
                         <div className="text-[17px] bg-white px-10 py-1">
@@ -509,7 +506,7 @@ export default function Home() {
                         </ul>
                       </div>
                       <span className="font-extrabold text-[20px] block py-1 mt-3">
-                        잠깐만요!
+                        WAIT !
                       </span>
                       <div className="text-[17px] bg-white px-10  py-3">
                         Did you get the MM code after the purchase? If not,
@@ -522,7 +519,7 @@ export default function Home() {
                       </div>
 
                       <span className="font-extrabold text-[20px] block py-1 mt-3">
-                        잠깐만요!
+                        WAIT !
                       </span>
                       <div className="text-[17px] bg-white px-10 py-3">
                         Did you check the ID card of your Memory Technician?{" "}
@@ -537,9 +534,6 @@ export default function Home() {
                     </>
                   ) : tab3State ? (
                     <>
-                      <span className="font-extrabold text-[30px]">
-                        MMR 이란?
-                      </span>
                       <br />
                       <br />
                       <div className="text-[17px] bg-white px-10 py-1">
