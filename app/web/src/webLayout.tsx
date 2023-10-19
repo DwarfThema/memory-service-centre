@@ -8,6 +8,7 @@ import NoticeView from "./notice";
 import ScreenTransition from "./screenTransition";
 import { useRecoilState } from "recoil";
 import langState from "./atom";
+import WhiteNoise from "./whiteNoise";
 
 export default function WebLayout({
   children,
@@ -44,6 +45,9 @@ export default function WebLayout({
         src={Frame}
         className="w-full h-full z-40 pointer-events-none fixed"
         alt="frame"
+        onLoad={() => (
+          <div className="w-screen h-screen z-50 absolute bg-[url('/textures/noise.gif')]" />
+        )}
       />
 
       <ScreenTransition href={url || homeUrl}>
