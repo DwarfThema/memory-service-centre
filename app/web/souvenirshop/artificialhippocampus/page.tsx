@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main className="w-screen h-screen  flex items-center flex-col">
       <WebLayout isHome={false}>
-        <div className="flex flex-col items-center w-[80%] mt-32 text-xl">
-          <div className="mt-10 w-[90%] flex">
+        <div className="flex flex-col items-center w-[60%] h-fit mt-32 text-xl">
+          <div className="mt-10 w-[90%] pb-[150px] flex">
             <Image
               src={ArtificialHippocampus}
               className="w-[50%]"
@@ -29,7 +29,7 @@ export default function Home() {
                 Order today, and your item is estimated to ship by Wed Sep 27
                 2023 <br />
                 <br /> - Mon Oct 02 2023. The above date only serves as an
-                estimate, and excludes weekends and holidays.(임시 글)
+                estimate, and excludes weekends and holidays.
               </div>
               <button className="text-[22px] w-[25%] h-[50px] rounded-md bg-[#C63484]">
                 Shop Now

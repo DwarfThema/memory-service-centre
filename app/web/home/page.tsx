@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={true} url={url}>
-        <div className="flex flex-col items-center justify-center w-1/4">
+        <div className="flex flex-col items-center justify-center w-1/4 py-[100px]">
           <Image
             src={LogoWitchTurnAround}
             className="w-1/6 h-fit"
