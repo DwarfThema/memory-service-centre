@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        zero: "0px",
+      },
       animation: {
         shrink: "shrink 0.2s ease-in-out forwards",
         visible: "visible 2s ease-in-out forwards",

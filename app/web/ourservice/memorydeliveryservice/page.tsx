@@ -28,19 +28,19 @@ export default function Home() {
         ) : null}
 
         {lang ? (
-          <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
-            <h1 className="mt-10 w-full flex">
+          <div className="flex flex-col items-center lg:w-6/12 lg:mt-36 lg:text-xl zero:w-9/12 zero:mt-20 zero:text-base">
+            <h1 className="mt-10 w-full flex lg:flex-row zero:flex-col zero:items-center">
               <Image
                 src={MemoryDeliveryService}
-                className="w-1/3 "
+                className="lg:w-1/3 zero:w-3/4"
                 alt="MemoryDeliveryService"
               />
               <div className="w-[10%]" />
-              <div className="flex flex-col justify-center">
+              <div className="fflex flex-col justify-center lg:mt-0 zero:mt-7">
                 <span className="w-full block text-[30px] font-semibold">
                   기억 선물 서비스
                 </span>
-                <span className="w-full block text-[22px] mt-3">
+                <span className="w-full block lg:text-[22px] zero:text-[20px] mt-3">
                   현재는 잠시뿐이지만, 기억은 영원히 남습니다. <br />
                   소중한 사람에게 영원을 선물해보세요.
                 </span>
@@ -123,19 +123,19 @@ export default function Home() {
             </footer>
           </div>
         ) : (
-          <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
-            <h1 className="mt-10 w-full flex">
+          <div className="flex flex-col items-center lg:w-6/12 lg:mt-36 lg:text-xl zero:w-9/12 zero:mt-20 zero:text-base">
+            <h1 className="mt-10 w-full flex lg:flex-row zero:flex-col zero:items-center">
               <Image
                 src={MemoryDeliveryService}
-                className="w-1/3 "
+                className="lg:w-1/3 zero:w-3/4"
                 alt="MemoryDeliveryService"
               />
               <div className="w-[10%]" />
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center lg:mt-0 zero:mt-7">
                 <span className="w-full block text-[30px] font-semibold">
                   Memory Delivery Service
                 </span>
-                <span className="w-full block text-[22px] mt-3">
+                <span className="w-full block lg:text-[22px] zero:text-[20px] mt-3">
                   The present is only for a moment, but the memory is forever
                   unless you forget it.
                 </span>
