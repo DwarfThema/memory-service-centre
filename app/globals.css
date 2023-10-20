@@ -17,7 +17,6 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-
 main {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
 }
@@ -50,4 +49,13 @@ img {
     /* The hack for Safari */
     height: -webkit-fill-available;
   }
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none; /* IE and 엣지 */
+  scrollbar-width: none; /* 파이어폭스 */
 }

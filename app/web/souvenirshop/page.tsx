@@ -13,8 +13,12 @@ export default function Home() {
   return (
     <main className="w-screen h-screen flex items-center flex-col">
       <WebLayout isHome={false} url={url}>
-        <div className="flex flex-col items-center w-[60%] mt-36">
-          <Image src={SouvenirShop} className="w-[12%]" alt="witch" />
+        <div className="flex flex-col items-center lg:mt-36 lg:w-6/12 zero:mt-20 zero:w-10/12">
+          <Image
+            src={SouvenirShop}
+            className="lg:w-[12%] zero:w-[25%]"
+            alt="witch"
+          />
           <span className="text-[40px]">Souvenir Shop</span>
           <div className="mt-6 w-[90%] grid grid-cols-2 gap-32">
             <button

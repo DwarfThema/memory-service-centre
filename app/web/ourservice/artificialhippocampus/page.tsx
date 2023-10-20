@@ -7,6 +7,7 @@ import Reservation from "../../src/reservation";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import langState from "../../src/atom";
+import { isMobile } from "react-device-detect";
 
 export default function Home() {
   const [isReservation, setReservation] = useState(false);
@@ -21,30 +22,30 @@ export default function Home() {
             onClick={() => {
               setReservation((prev) => !prev);
             }}
-            className="fixed w-screen h-screen bg-black bg-opacity-60 z-50 flex items-center justify-center cursor-pointer"
+            className="fixed w-full h-full bg-black bg-opacity-60 z-50 flex items-center justify-center cursor-pointer"
           >
             <Reservation />
           </div>
         ) : null}
         {lang ? (
-          <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
-            <h1 className="mt-10 w-full flex">
+          <div className="flex flex-col items-center lg:w-6/12 lg:mt-36 lg:text-xl zero:w-9/12 zero:mt-20 zero:text-base ">
+            <div className="mt-10 w-full flex lg:flex-row zero:flex-col zero:items-center">
               <Image
                 src={mainPhoto}
-                className="w-1/3 "
+                className="lg:w-1/3 zero:w-3/4 "
                 alt="ArtificialHippocampus"
               />
               <div className="w-[10%]" />
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center lg:mt-0 zero:mt-7 ">
                 <span className="w-full block text-[30px] font-semibold">
                   인공해마
                 </span>
-                <span className="w-full block text-[22px] mt-3">
+                <span className="w-full block lg:text-[22px] zero:text-[20px] mt-3">
                   기억을 저장하고 탑재합니다. 당신은 기존과 다른 성격을 갖게 될
                   수도 있습니다.
                 </span>
               </div>
-            </h1>
+            </div>
             <div className="mt-10">
               <span>
                 인공해마는 인지와 관련된 보철물의 일종으로, 기억과 학습을
@@ -109,24 +110,24 @@ export default function Home() {
             </footer>
           </div>
         ) : (
-          <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
-            <h1 className="mt-10 w-full flex">
+          <div className="flex flex-col items-center lg:w-6/12 lg:mt-36 lg:text-xl zero:w-9/12 zero:mt-20 zero:text-base">
+            <div className="mt-10 w-full flex lg:flex-row zero:flex-col zero:items-center">
               <Image
                 src={mainPhoto}
-                className="w-1/3 "
+                className="lg:w-1/3 zero:w-3/4 "
                 alt="ArtificialHippocampus"
               />
               <div className="w-[10%]" />
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center lg:mt-0 zero:mt-7">
                 <span className="w-full block text-[30px] font-semibold">
                   Artificial Hippocampus
                 </span>
-                <span className="w-full block text-[22px] mt-3">
+                <span className="w-full block lg:text-[22px] zero:text-[20px] mt-3">
                   Save and mount your memories. You may get quite different
                   personality.
                 </span>
               </div>
-            </h1>
+            </div>
             <div className="mt-10">
               <span>
                 Artificial hippocampus, a type of prosthesis related to

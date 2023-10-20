@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"font-dos scrollbar-hide bg-white"}>
+      <body className="font-dos scrollbar-hide bg-white">
         <RecoilRootProvider>{children}</RecoilRootProvider>
       </body>
     </html>

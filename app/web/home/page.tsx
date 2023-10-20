@@ -7,7 +7,7 @@ import About from "../../../public/textures/web-home/About.png";
 import OurService from "../../../public/textures/web-home/Our Service.png";
 import Regulatory from "../../../public/textures/web-home/Regulatory.png";
 import PressReleases from "../../../public/textures/web-home/Press Releases.png";
-import SouvenirShop from "../../../public/textures/web-home/Souvenir Shop.png";
+import Certification from "../../../public/textures/web-home/Certification.png";
 import WebLayout from "../src/webLayout";
 import { useState } from "react";
 export default function Home() {
@@ -16,14 +16,14 @@ export default function Home() {
   return (
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={true} url={url}>
-        <div className="flex flex-col items-center justify-center w-1/4 py-[100px]">
+        <div className="flex flex-col items-center justify-center lg:w-1/4 zero:w-5/6 py-[100px]">
           <Image
             src={LogoWitchTurnAround}
-            className="w-1/6 h-fit"
+            className="lg:w-1/6 zero:w-[20%] h-fit"
             alt="witch"
           />
           <Image src={Logo} className="w-full h-fit" alt="logo" />
-          <div className="mt-7 w-[620px] h-[450px] text-[20px] bg-[url('/textures/web-home/Base.png')] bg-contain bg-no-repeat flex flex-col justify-center items-center text-center ">
+          <div className="mt-7 lg:w-[620px] lg:h-[450px] lg:text-[20px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] bg-contain bg-no-repeat flex flex-col items-center text-center ">
             <div className="mr-3 flex flex-col justify-center items-center">
               <div className="flex">
                 <button
@@ -34,7 +34,7 @@ export default function Home() {
                 >
                   <Image
                     src={About}
-                    className="w-[95px] mx-10 h-fit"
+                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   About
@@ -47,7 +47,7 @@ export default function Home() {
                 >
                   <Image
                     src={OurService}
-                    className="w-[95px] mx-10 h-fit"
+                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Our Service
@@ -61,7 +61,7 @@ export default function Home() {
                 >
                   <Image
                     src={Regulatory}
-                    className="w-[95px] mx-10 h-fit"
+                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Regulatory
@@ -69,31 +69,31 @@ export default function Home() {
               </div>
               <div className="flex mt-5">
                 <button
-                  className="flex items-center flex-col mt-1 cursor-pointer"
+                  className="flex items-center flex-col lg:mt-1 zero:mt-0 cursor-pointer"
                   onClick={() => {
                     setUrl("/web/pressreleases");
                   }}
                 >
                   <Image
                     src={PressReleases}
-                    className="w-[95px] mx-10 h-fit"
+                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Press Releases
                 </button>
 
                 <button
-                  className="flex items-center flex-col mt-1 cursor-pointer"
+                  className="flex items-center flex-col lg:mt-1 zero:mt-0 cursor-pointer"
                   onClick={() => {
-                    setUrl("/web/souvenirshop");
+                    setUrl("/web/certification");
                   }}
                 >
                   <Image
-                    src={SouvenirShop}
-                    className="w-[95px] mx-10 h-fit"
+                    src={Certification}
+                    className="lg:w-[95px] zero:w-[50px] lg:my-3 zero:my-[5.5px] mx-10 h-fit my-3"
                     alt="logo"
                   />
-                  Souvenir Shop
+                  Certification
                 </button>
               </div>
             </div>

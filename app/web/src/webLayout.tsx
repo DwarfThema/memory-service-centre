@@ -8,7 +8,7 @@ import NoticeView from "./notice";
 import ScreenTransition from "./screenTransition";
 import { useRecoilState } from "recoil";
 import langState from "./atom";
-import WhiteNoise from "./whiteNoise";
+import { isMobile } from "react-device-detect";
 
 export default function WebLayout({
   children,
@@ -43,7 +43,7 @@ export default function WebLayout({
     <>
       <Image
         src={Frame}
-        className="w-full h-full z-40 pointer-events-none fixed"
+        className="lg:block zero:hidden w-full h-full z-40 pointer-events-none fixed"
         alt="frame"
         onLoad={() => (
           <div className="w-screen h-screen z-50 absolute bg-[url('/textures/noise.gif')]" />
@@ -62,14 +62,14 @@ export default function WebLayout({
           >
             <Image
               src={LogoWitchTurnAround}
-              className="fixed left-[10%] top-[15%] w-[6%]"
+              className="fixed lg:left-[10%] lg:top-[15%] lg:w-[6%] zero:left-[5%] zero:top-[5%] zero:w-[14%] z-10"
               alt="home"
             />
           </div>
         )}
 
         {main ? null : (
-          <div className="fixed text-center right-[15%] top-[15%] flex font-bold text-2xl">
+          <div className="fixed text-center lg:right-[15%] lg:top-[15%] lg:text-2xl zero:right-[5%] zero:top-[7%] zero:text-xl flex font-bold z-10">
             <div
               onClick={() => {
                 setLang(true);
@@ -99,7 +99,7 @@ export default function WebLayout({
           >
             <Image
               src={Notice}
-              className="fixed left-[10%] bottom-[15%] w-[4%]"
+              className="fixed lg:left-[10%] lg:bottom-[15%] lg:w-[4%] zero:left-[5%] zero:bottom-[5%] zero:w-[10%] z-10"
               alt="notice"
             />
           </div>
@@ -117,7 +117,7 @@ export default function WebLayout({
         ) : null}
 
         <div
-          className="z-10 pointer-events-none w-screen h-screen  fixed"
+          className="z-10 pointer-events-none w-full h-full  fixed"
           style={{
             backgroundImage:
               "linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),linear-gradient(rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06))",

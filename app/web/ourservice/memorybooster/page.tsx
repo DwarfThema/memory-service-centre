@@ -27,15 +27,19 @@ export default function Home() {
           </div>
         ) : null}
         {lang ? (
-          <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
-            <h1 className="mt-10 w-full flex">
-              <Image src={mainPhoto} className="w-1/3 " alt="mainPhoto" />
+          <div className="flex flex-col items-center lg:w-6/12 lg:mt-36 lg:text-xl zero:w-9/12 zero:mt-20 zero:text-base">
+            <h1 className="mt-10 w-full flex lg:flex-row zero:flex-col zero:items-center">
+              <Image
+                src={mainPhoto}
+                className="lg:w-1/3 zero:w-3/4 "
+                alt="mainPhoto"
+              />
               <div className="w-[10%]" />
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center lg:mt-0 zero:mt-7">
                 <span className="w-full block text-[30px] font-semibold">
                   기억 부스터
                 </span>
-                <span className="w-full block text-[22px] mt-3">
+                <span className="w-full block lg:text-[22px] zero:text-[20px] mt-3">
                   단기 기억력을 향상시킵니다. 이것은 당신을 세계 기억 챔피언으로
                   만들 수 있습니다.
                 </span>
@@ -111,15 +115,19 @@ export default function Home() {
             </footer>
           </div>
         ) : (
-          <div className="flex flex-col items-center w-6/12 mt-36 text-xl">
-            <h1 className="mt-10 w-full flex">
-              <Image src={mainPhoto} className="w-1/3 " alt="mainPhoto" />
+          <div className="flex flex-col items-center lg:w-6/12 lg:mt-36 lg:text-xl zero:w-9/12 zero:mt-20 zero:text-base">
+            <h1 className="mt-10 w-full flex lg:flex-row zero:flex-col zero:items-center">
+              <Image
+                src={mainPhoto}
+                className="lg:w-1/3 zero:w-3/4"
+                alt="mainPhoto"
+              />
               <div className="w-[10%]" />
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center lg:mt-0 zero:mt-7">
                 <span className="w-full block text-[30px] font-semibold">
                   Memory Booster
                 </span>
-                <span className="w-full block text-[22px] mt-3">
+                <span className="w-full block lg:text-[22px] zero:text-[20px] mt-3">
                   Improve your short-term memory. It can make you the world
                   memory champion.
                 </span>

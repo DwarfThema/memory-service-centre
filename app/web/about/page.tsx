@@ -12,7 +12,7 @@ export default function About() {
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={false}>
         <div className="flex flex-col items-center justify-center w-3/4 font-dos text-center">
-          <div className="text-[30px] ">
+          <div className="lg:text-[30px] zero:text-[16px] ">
             {lang ? (
               <>
                 <div>
@@ -37,8 +37,8 @@ export default function About() {
               </>
             )}
           </div>
-          <div className="my-12 border-t-2 border-black w-full " />
-          <div className="text-[25px]">
+          <div className="lg:my-12 zero:my-5 border-t-2 border-black w-full " />
+          <div className="lg:text-[25px] zero:text-[16px] ">
             dasomsong 2023
             <br />
             Web Development : dwarfthema <br />
