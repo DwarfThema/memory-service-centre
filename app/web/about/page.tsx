@@ -47,7 +47,7 @@ export default function About() {
                   width={25}
                   height={25}
                   alt="dasomInsta"
-                  className="ml-[5px]"
+                  className="ml-[5px] zero:w-[20px] zero:h-[20px]"
                   quality={10}
                 />
               </Link>
@@ -63,13 +63,13 @@ export default function About() {
                   width={25}
                   height={25}
                   alt="junhoInsta"
-                  className="ml-[5px]"
+                  className="ml-[5px] zero:w-[20px] zero:h-[20px]"
                   quality={10}
                 />
               </Link>
             </div>
             <div className="flex justify-center items-center">
-              <div>Scientific Advisor & Sound : Spaceihunnid</div>
+              <div>Advisor & Sound : Spaceihunnid</div>
               <Link
                 href="https://www.instagram.com/spacejihunnid/"
                 target="_blank"
@@ -79,7 +79,7 @@ export default function About() {
                   width={25}
                   height={25}
                   alt="SpaceihunnidInsta"
-                  className=" ml-[5px]"
+                  className="ml-[5px] zero:w-[20px] zero:h-[20px]"
                   quality={10}
                 />
               </Link>
