@@ -2,16 +2,84 @@
 
 import Image from "next/image";
 import Certification from "../../../public/textures/web-home/Certification.png";
-import TShirts from "../../../public/textures/souvenirShop/PressTShirts.png";
+import CertificationCard from "../../../public/textures/certification/certificateCard.jpeg";
 import Link from "next/link";
 import WebLayout from "../src/webLayout";
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import { useRecoilState } from "recoil";
 import langState from "../src/atom";
+import { Oswald } from "next/font/google";
+import html2canvas from "html2canvas";
+
+const mainFont = Oswald({
+  weight: "500",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   const [url, setUrl] = useState("");
   const [lang, setLang] = useRecoilState(langState);
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [name, setName] = useState<string>("");
+  const [dob, setDob] = useState<string>("");
+  const [gender, setGender] = useState<string>("");
+
+  const [img, setImg] = useState("");
+  const [isModal, setMotal] = useState(false);
+
+  const onButtonClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const onFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const base64 = reader.result as string;
+        localStorage.setItem("uploadedImage", base64);
+        setSelectedImage(base64);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const onDobChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const date = new Date(e.target.value);
+    const formattedDate = `${date.getDate()} ${date.toLocaleString("en-US", {
+      month: "short",
+    })}.`;
+    setDob(formattedDate);
+  };
+
+  const onGenderChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setGender(e.target.value);
+  };
+
+  function submitOn() {
+    console.log("isisis");
+
+    setMotal(true);
+  }
+
+  const captureCardArea = async (e: FormEvent) => {
+    e.preventDefault();
+    const cardArea = document.getElementById("CardArea");
+    if (cardArea) {
+      const canvas = await html2canvas(cardArea);
+      const imgData = canvas.toDataURL("image/png");
+      setImg(imgData);
+    }
+
+    setMotal(true);
+  };
 
   return (
     <main className="w-screen h-screen flex items-center flex-col">
@@ -26,8 +94,52 @@ export default function Home() {
             Certification
           </span>
           <div className="mt-10 w-[90%] flex lg:flex-row zero:flex-col lg:items-start zero:items-center ">
-            <div className="lg:w-[45%] zero:w-[90%] flex justify-center items-center">
-              <div className="bg-gray-400 lg:h-[500px] lg:w-[70%] zero:h-[300px] zero:w-[90%] " />
+            <div className="lg:w-[310px] zero:w-[90%] flex justify-center items-center">
+              <div
+                id="CardArea"
+                className="w-[310px] h-[460px] bg-[url('/textures/certification/certificateCard.jpeg')] bg-contain bg-no-repeat flex flex-col"
+              >
+                {selectedImage ? (
+                  <div className="flex justify-center items-center w-[145px] h-[190px] mr-[200px] bg-white">
+                    <Image
+                      src={selectedImage}
+                      alt="selectedImage"
+                      width={145}
+                      height={190}
+                      className="w-[145px] h-[190px] object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <button
+                      className="w-[145px] h-[190px]"
+                      onClick={onButtonClick}
+                    />
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      style={{ display: "none" }}
+                      accept="image/*"
+                      onChange={onFileChange}
+                    />
+                  </div>
+                )}
+                <div className="absolute  flex flex-col items-end justify-end w-[190px] mt-[195px] ml-[100px] text-xl">
+                  <div className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1">
+                    <span className={mainFont.className}>
+                      {name ? name : <br />}
+                    </span>
+                  </div>
+                  <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
+                    <span className={mainFont.className}>
+                      {dob ? dob : <br />}
+                    </span>
+                  </div>
+                  <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
+                    <span className={mainFont.className}>{gender}</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="lg:w-[120px] zero:w-[10px] lg:h-[0px] zero:h-[20px] " />
             <div className="lg:w-[50%] zero:w-full lg:text-2xl zero:text-md lg:text-right zero:text-left">
@@ -38,7 +150,9 @@ export default function Home() {
                     type="text"
                     name="name"
                     placeholder="name"
+                    maxLength={15}
                     className="border-2 border-gray-400 border-solid px-2 w-[270px]"
+                    onChange={onNameChange}
                   />
                 </div>
 
@@ -46,9 +160,10 @@ export default function Home() {
                   <span className="block mr-4 w-[120px] ">Birth date</span>
                   <input
                     type="date"
-                    name="Birth Data"
+                    name="BirthData"
                     placeholder="123123"
                     className="border-2 border-gray-400 border-solid px-2 w-[270px]"
+                    onChange={onDobChange}
                   />
                 </div>
 
@@ -71,8 +186,9 @@ export default function Home() {
                       <input
                         type="radio"
                         name="gender"
-                        value="male"
+                        value="Male"
                         className="bg-slate-400 mr-2"
+                        onChange={onGenderChange}
                       />
                       <span>Male</span>
                     </label>
@@ -80,8 +196,9 @@ export default function Home() {
                       <input
                         type="radio"
                         name="gender"
-                        value="both"
+                        value="Both"
                         className="bg-slate-400 mr-2"
+                        onChange={onGenderChange}
                       />
                       <span>Both</span>
                     </label>{" "}
@@ -89,8 +206,9 @@ export default function Home() {
                       <input
                         type="radio"
                         name="gender"
-                        value="female"
+                        value="Female"
                         className="bg-slate-400 mr-2"
+                        onChange={onGenderChange}
                       />
                       <span>Female</span>
                     </label>
@@ -98,8 +216,9 @@ export default function Home() {
                       <input
                         type="radio"
                         name="gender"
-                        value="neither"
+                        value="Neither"
                         className="bg-slate-400 mr-2"
+                        onChange={onGenderChange}
                       />
                       <span>Neither</span>
                     </label>
@@ -109,6 +228,7 @@ export default function Home() {
                   <button
                     type="submit"
                     className="bg-[#C63484] text-white lg:px-4 zero:px-[120px] py-1 rounded-md"
+                    onClick={captureCardArea}
                   >
                     Generate
                   </button>
@@ -141,6 +261,21 @@ export default function Home() {
           </footer>
         </div>
       </WebLayout>
+      {isModal ? (
+        <div
+          onClick={() => {
+            setMotal((prev) => !prev);
+          }}
+          className="fixed w-screen h-screen bg-black bg-opacity-60 z-20 flex items-center justify-center cursor-pointer"
+        >
+          <div className="lg:h-[55%] lg:w-[55%] zero:h-[80%] zero:w-[85%] zero:px-5 zero:pt-2 bg-contain bg-no-repeat bg-center  flex text-center justify-center items-center flex-col text-white text-2xl">
+            <>
+              <Image src={img} width={310} height={460} alt="IDCARD" />
+              DOWNLOAD CARD
+            </>
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }

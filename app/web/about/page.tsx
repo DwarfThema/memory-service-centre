@@ -39,10 +39,10 @@ export default function About() {
           </div>
           <div className="lg:my-12 zero:my-5 border-t-2 border-black w-full " />
           <div className="lg:text-[25px] zero:text-[16px] ">
-            dasomsong 2023
+            © dasomsong 2023
             <br />
             Web Development : dwarfthema <br />
-            Scientific Advisor : Spacejihunnid
+            Scientific Advisor & Sound : Spaceihunnid
           </div>
         </div>
       </WebLayout>
