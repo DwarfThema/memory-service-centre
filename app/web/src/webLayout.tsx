@@ -48,6 +48,7 @@ export default function WebLayout({
         onLoad={() => (
           <div className="w-screen h-screen z-50 absolute bg-[url('/textures/noise.gif')]" />
         )}
+        quality={50}
       />
 
       <ScreenTransition href={url || homeUrl}>

@@ -97,7 +97,7 @@ export default function Home() {
             <div className="lg:w-[310px] zero:w-[90%] flex justify-center items-center">
               <div
                 id="CardArea"
-                className="w-[310px] h-[460px] bg-[url('/textures/certification/certificateCard.jpeg')] bg-contain bg-no-repeat flex flex-col"
+                className="w-[310px] h-[460px] p-4 bg-[url('/textures/certification/certificateCard.jpeg')] bg-contain bg-no-repeat flex flex-col"
               >
                 {selectedImage ? (
                   <div className="flex justify-center items-center w-[145px] h-[190px] mr-[200px] bg-white">
@@ -124,8 +124,8 @@ export default function Home() {
                     />
                   </div>
                 )}
-                <div className="absolute  flex flex-col items-end justify-end w-[190px] mt-[195px] ml-[100px] text-xl">
-                  <div className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1">
+                <div className="absolute  flex flex-col items-end justify-end w-[190px] mt-[185px] ml-[93px] text-xl">
+                  <div className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1 ">
                     <span className={mainFont.className}>
                       {name ? name : <br />}
                     </span>

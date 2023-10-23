@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "../../../public/textures/logo.png";
-import LogoWitchTurnAround from "../../../public/textures/logo_witch_turnAround.gif";
+import instalogo from "../../../public/textures/about/instalogo.png";
 import WebLayout from "../src/webLayout";
 import { useRecoilState } from "recoil";
 import langState from "../src/atom";
+import Link from "next/link";
 export default function About() {
   const [lang, setLang] = useRecoilState(langState);
   return (
@@ -38,11 +38,52 @@ export default function About() {
             )}
           </div>
           <div className="lg:my-12 zero:my-5 border-t-2 border-black w-full " />
-          <div className="lg:text-[25px] zero:text-[16px] ">
-            © dasomsong 2023
-            <br />
-            Web Development : dwarfthema <br />
-            Scientific Advisor & Sound : Spaceihunnid
+          <div className="lg:text-[25px] zero:text-[16px] flex flex-col justify-center items-center text-center">
+            <div className="flex justify-center items-center">
+              <div>© dasomsong 2023</div>
+              <Link href="https://www.instagram.com/sseeoul/" target="_blank">
+                <Image
+                  src={instalogo}
+                  width={25}
+                  height={25}
+                  alt="dasomInsta"
+                  className="ml-[5px]"
+                  quality={10}
+                />
+              </Link>
+            </div>
+            <div className="flex justify-center items-center">
+              <div>Web Development : dwarfthema</div>
+              <Link
+                href="https://www.instagram.com/dwarfthema/"
+                target="_blank"
+              >
+                <Image
+                  src={instalogo}
+                  width={25}
+                  height={25}
+                  alt="junhoInsta"
+                  className="ml-[5px]"
+                  quality={10}
+                />
+              </Link>
+            </div>
+            <div className="flex justify-center items-center">
+              <div>Scientific Advisor & Sound : Spaceihunnid</div>
+              <Link
+                href="https://www.instagram.com/spacejihunnid/"
+                target="_blank"
+              >
+                <Image
+                  src={instalogo}
+                  width={25}
+                  height={25}
+                  alt="SpaceihunnidInsta"
+                  className=" ml-[5px]"
+                  quality={10}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </WebLayout>
