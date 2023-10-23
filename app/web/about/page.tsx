@@ -69,7 +69,7 @@ export default function About() {
               </Link>
             </div>
             <div className="flex justify-center items-center">
-              <div>Advisor & Sound : Spaceihunnid</div>
+              <div>Scientific Advisor & Sound : Spaceihunnid</div>
               <Link
                 href="https://www.instagram.com/spacejihunnid/"
                 target="_blank"
