@@ -152,7 +152,7 @@ export default function Home() {
               </button>{" "}
             </div>
           ) : (
-            <div className="mt-10 w-full grid grid-cols-3 gap-6 leading-4">
+            <div className="mt-10 w-full grid grid-cols-3 gap-6 leading-7 ">
               <button
                 className="flex flex-col items-start"
                 onClick={() => {
@@ -164,7 +164,7 @@ export default function Home() {
                   className="w-full"
                   alt="ArtificialHippocampus"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Artificial Hippocampus
                 </span>
               </button>{" "}
@@ -179,7 +179,7 @@ export default function Home() {
                   className="w-full"
                   alt="PlaceboEffect"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Placebo Effect
                 </span>
               </button>{" "}
@@ -194,7 +194,7 @@ export default function Home() {
                   className="w-full"
                   alt="ErasingTraumaticMemory"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Erasing Traumatic Memory
                 </span>
               </button>{" "}
@@ -209,7 +209,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryRecovery"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Recovery
                 </span>
               </button>{" "}
@@ -224,7 +224,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryBooster"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Booster
                 </span>
               </button>{" "}
@@ -239,7 +239,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryDeliveryService"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Delivery Service
                 </span>
               </button>{" "}
@@ -254,7 +254,7 @@ export default function Home() {
                   className="w-full"
                   alt="RelationshipTherapy"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Relationship
                   <br />
                   therapy
@@ -271,7 +271,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryPreservation"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Preservation
                 </span>
               </button>{" "}

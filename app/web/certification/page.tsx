@@ -95,145 +95,165 @@ export default function Home() {
           </span>
           <div className="mt-10 w-[90%] flex lg:flex-row zero:flex-col lg:items-start zero:items-center ">
             <div className="lg:w-[310px] zero:w-[90%] flex justify-center items-center">
-              <div
-                id="CardArea"
-                className="w-[310px] h-[460px] p-4 bg-[url('/textures/certification/certificateCard.jpeg')] bg-contain bg-no-repeat flex flex-col"
-              >
-                {selectedImage ? (
-                  <div className="flex justify-center items-center w-[145px] h-[190px] mr-[200px] bg-white">
-                    <Image
-                      src={selectedImage}
-                      alt="selectedImage"
-                      width={145}
-                      height={190}
-                      className="w-[145px] h-[190px] object-contain"
-                    />
-                  </div>
-                ) : (
-                  <div>
-                    <button
-                      className="w-[145px] h-[190px]"
-                      onClick={onButtonClick}
-                    />
-                    <input
-                      type="file"
-                      ref={fileInputRef}
-                      style={{ display: "none" }}
-                      accept="image/*"
-                      onChange={onFileChange}
-                    />
-                  </div>
-                )}
-                <div className="absolute  flex flex-col items-end justify-end w-[190px] mt-[185px] ml-[93px] text-xl">
-                  <div className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1 ">
-                    <span className={mainFont.className}>
-                      {name ? name : <br />}
-                    </span>
-                  </div>
-                  <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
-                    <span className={mainFont.className}>
-                      {dob ? dob : <br />}
-                    </span>
-                  </div>
-                  <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
-                    <span className={mainFont.className}>{gender}</span>
+              <div className="w-[310px] h-[460px] drop-shadow-xl">
+                <div
+                  id="CardArea"
+                  className="w-[310px] h-[460px] p-4 bg-[url('/textures/certification/certificateCard.jpeg')] bg-contain bg-no-repeat flex flex-col"
+                >
+                  {selectedImage ? (
+                    <div className="flex justify-center items-center w-[145px] h-[190px] mr-[200px] bg-white ">
+                      <Image
+                        src={selectedImage}
+                        alt="selectedImage"
+                        width={145}
+                        height={190}
+                        className="w-[145px] h-[190px] object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <button
+                        className="w-[145px] h-[190px]"
+                        onClick={onButtonClick}
+                      />
+                      <input
+                        type="file"
+                        ref={fileInputRef}
+                        style={{ display: "none" }}
+                        accept="image/*"
+                        onChange={onFileChange}
+                      />
+                    </div>
+                  )}
+                  <div className="absolute  flex flex-col items-end justify-end w-[190px] mt-[185px] ml-[93px] text-xl">
+                    <div className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1 ">
+                      <span className={mainFont.className}>
+                        {name ? name : <br />}
+                      </span>
+                    </div>
+                    <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
+                      <span className={mainFont.className}>
+                        {dob ? dob : <br />}
+                      </span>
+                    </div>
+                    <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
+                      <span className={mainFont.className}>{gender}</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="lg:w-[120px] zero:w-[10px] lg:h-[0px] zero:h-[20px] " />
             <div className="lg:w-full zero:w-full lg:text-2xl zero:text-md lg:text-right zero:text-left">
-              <form>
-                <div className="flex items-center">
-                  <span className="block mr-4 w-[120px]">Name</span>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="name"
-                    maxLength={15}
-                    className="border-2 border-gray-400 border-solid px-2 w-[270px]"
-                    onChange={onNameChange}
-                  />
-                </div>
+              <div className="flex items-center">
+                <span className="block mr-4 w-[120px]">Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="name"
+                  maxLength={15}
+                  className="border-2 border-gray-400 border-solid px-2 w-[270px]"
+                  onChange={onNameChange}
+                />
+              </div>
 
-                <div className="flex items-center mt-4">
-                  <span className="block mr-4 w-[120px] ">Birth date</span>
-                  <input
-                    type="date"
-                    name="BirthData"
-                    className="border-2 border-gray-400 border-solid px-2 w-[270px]"
-                    onChange={onDobChange}
-                    lang="en"
-                  />
-                </div>
+              <div className="flex items-center mt-4">
+                <span className="block mr-4 w-[120px] ">Birth date</span>
+                <input
+                  type="date"
+                  name="BirthData"
+                  className="border-2 border-gray-400 border-solid px-2 w-[270px]"
+                  onChange={onDobChange}
+                  lang="en"
+                />
+              </div>
 
-                <div className="flex items-center mt-4">
-                  <span className="block mr-4 w-[120px]">E-mail</span>
-                  <input
-                    type="email"
-                    name="E-mail"
-                    placeholder="***@***.***"
-                    className="border-2 border-gray-400 border-solid px-2 w-[270px]"
-                  />
-                </div>
+              <div className="flex items-center mt-4">
+                <span className="block mr-4 w-[120px]">E-mail</span>
+                <input
+                  type="email"
+                  name="E-mail"
+                  placeholder="***@***.***"
+                  className="border-2 border-gray-400 border-solid px-2 w-[270px]"
+                />
+              </div>
 
-                <div className="flex mt-4">
-                  <span className="block lg:mr-4 zero:mr-0 w-[120px]">
-                    Gender
-                  </span>
-                  <div className="grid grid-cols-2 lg:gap-x-28 zero:gap-x-10 lg:gap-y-3 zero:gap-y-1 w-[200px]">
-                    <label className="w-20 h-fit flex items-center">
-                      <input
-                        type="radio"
-                        name="gender"
-                        value="Male"
-                        className="bg-slate-400 mr-2"
-                        onChange={onGenderChange}
-                      />
-                      <span>Male</span>
-                    </label>
-                    <label className="w-20 h-fit flex items-center">
-                      <input
-                        type="radio"
-                        name="gender"
-                        value="Both"
-                        className="bg-slate-400 mr-2"
-                        onChange={onGenderChange}
-                      />
-                      <span>Both</span>
-                    </label>{" "}
-                    <label className="w-20 h-fit flex items-center">
-                      <input
-                        type="radio"
-                        name="gender"
-                        value="Female"
-                        className="bg-slate-400 mr-2"
-                        onChange={onGenderChange}
-                      />
-                      <span>Female</span>
-                    </label>
-                    <label className="w-20 h-fit flex items-center">
-                      <input
-                        type="radio"
-                        name="gender"
-                        value="Neither"
-                        className="bg-slate-400 mr-2"
-                        onChange={onGenderChange}
-                      />
-                      <span>Neither</span>
-                    </label>
-                  </div>
+              <div className="flex mt-4">
+                <span className="block lg:mr-4 zero:mr-0 w-[120px]">
+                  Gender
+                </span>
+                <div className="grid grid-cols-2 lg:gap-x-28 zero:gap-x-10 lg:gap-y-3 zero:gap-y-1 w-[200px]">
+                  <label className="w-20 h-fit flex items-center">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Male"
+                      className="bg-slate-400 mr-2"
+                      onChange={onGenderChange}
+                    />
+                    <span>Male</span>
+                  </label>
+                  <label className="w-20 h-fit flex items-center">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Both"
+                      className="bg-slate-400 mr-2"
+                      onChange={onGenderChange}
+                    />
+                    <span>Both</span>
+                  </label>{" "}
+                  <label className="w-20 h-fit flex items-center">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Female"
+                      className="bg-slate-400 mr-2"
+                      onChange={onGenderChange}
+                    />
+                    <span>Female</span>
+                  </label>
+                  <label className="w-20 h-fit flex items-center">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Neither"
+                      className="bg-slate-400 mr-2"
+                      onChange={onGenderChange}
+                    />
+                    <span>Neither</span>
+                  </label>
                 </div>
-                <div className="flex justify-center lg:mt-8 zero:mt-7">
+              </div>
+
+              <div className="flex items-center lg:mt-2 zero:mt-3">
+                <span className="block lg:mr-4 zero:mr-0 w-[120px]">Photo</span>
+                <div className="flex w-full justify-center">
                   <button
-                    type="submit"
-                    className="bg-[#C63484] text-white lg:px-4 zero:px-[120px] py-1 rounded-md"
-                    onClick={captureCardArea}
+                    className="bg-[#C0C0C0] border-[#929292] border-2 text-black lg:px-7 zero:px-[120px] rounded-sm"
+                    onClick={onButtonClick}
                   >
-                    Generate
+                    Upload
                   </button>
+
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    style={{ display: "none" }}
+                    accept="image/*"
+                    onChange={onFileChange}
+                  />
                 </div>
-              </form>
+              </div>
+              <div className="flex justify-center lg:mt-8 zero:mt-7">
+                <button
+                  type="submit"
+                  className="bg-[#C63484] text-white lg:px-4 zero:px-[120px] py-1 rounded-md"
+                  onClick={captureCardArea}
+                >
+                  Generate
+                </button>
+              </div>
               {lang ? (
                 <div className="text-sm flex text-left lg:mt-5 zero:mt-7">
                   *저는 MSC와 기억 조작 관련 헌법에 기재된 모든 위반사항에 대해
