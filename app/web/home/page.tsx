@@ -23,7 +23,7 @@ export default function Home() {
             alt="witch"
           />
           <Image src={Logo} className="w-full h-fit" alt="logo" />
-          <div className="mt-7 lg:w-[600px] lg:h-[450px] lg:text-[20px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] lg:bg-cover lg:bg-contain bg-no-repeat flex flex-col items-center text-center ">
+          <div className="mt-7 lg:w-[600px] lg:h-[450px] lg:text-[20px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] lg:bg-cover zero:bg-contain bg-no-repeat flex flex-col items-center text-center ">
             <div className="mr-3 flex flex-col justify-center items-center">
               <div className="flex">
                 <button

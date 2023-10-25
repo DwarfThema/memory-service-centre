@@ -106,7 +106,7 @@ export default function Home() {
                 <div className="py-8 lg:px-8 zero:px-2">
                   {lang ? (
                     tab1State ? (
-                      <>
+                      <div className="font-dos font-extrabold">
                         <span className="font-extrabold text-[30px]">
                           제 23장 기억 조작
                         </span>
@@ -187,9 +187,9 @@ export default function Home() {
                           불가한 경우는 제외한다.
                           <br />
                         </div>
-                      </>
+                      </div>
                     ) : tab2State ? (
-                      <>
+                      <div className="font-dos font-extrabold">
                         <span className="font-extrabold text-[30px]">
                           MMR 이란?
                         </span>
@@ -269,9 +269,9 @@ export default function Home() {
                           확인할 수 있습니다. 문제가 발생하면 경찰에 신고하고
                           즉시 센터에서 나가세요.
                         </div>
-                      </>
+                      </div>
                     ) : tab3State ? (
-                      <>
+                      <div className="font-dos font-extrabold">
                         <div className="text-[17px] bg-white lg:px-10 zero:px-0 py-1">
                           <div className="flex my-10 lg:flex-row zero:flex-col zero:items-center  ">
                             <Image
@@ -290,9 +290,9 @@ export default function Home() {
                             </span>
                           </div>
                         </div>
-                      </>
+                      </div>
                     ) : tab4State ? (
-                      <>
+                      <div className="font-dos font-extrabold">
                         <div>
                           <span className="font-extrabold text-[15px] ">
                             ‘테세우스의 역설’을 아시나요?
@@ -347,7 +347,7 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                      </>
+                      </div>
                     ) : null
                   ) : tab1State ? (
                     <>
