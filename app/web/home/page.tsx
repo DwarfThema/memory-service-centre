@@ -16,14 +16,14 @@ export default function Home() {
   return (
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={true} url={url}>
-        <div className="flex flex-col items-center justify-center lg:w-1/4 zero:w-5/6 py-[100px]">
+        <div className="flex flex-col items-center justify-center lg:w-[800px] zero:w-5/6 py-[100px]">
           <Image
             src={LogoWitchTurnAround}
             className="lg:w-1/6 zero:w-[20%] h-fit"
             alt="witch"
           />
           <Image src={Logo} className="w-full h-fit" alt="logo" />
-          <div className="mt-7 lg:w-[620px] lg:h-[450px] lg:text-[20px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] bg-contain bg-no-repeat flex flex-col items-center text-center ">
+          <div className="mt-7 lg:w-[600px] lg:h-[450px] lg:text-[20px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] lg:bg-cover lg:bg-contain bg-no-repeat flex flex-col items-center text-center ">
             <div className="mr-3 flex flex-col justify-center items-center">
               <div className="flex">
                 <button

@@ -121,7 +121,7 @@ export default function WebLayout({
           className="z-10 pointer-events-none w-full h-full  fixed"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),linear-gradient(rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06))",
+              "linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.1) 50%),linear-gradient(rgba(255,0,0,0.01), rgba(0,255,0,0.01), rgba(0,0,255,0.01))",
             backgroundSize: `100% 2.5px, 100% ${coverValue}px`,
           }}
         />
