@@ -16,14 +16,14 @@ export default function Home() {
   return (
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={true} url={url}>
-        <div className="flex flex-col items-center justify-center lg:w-[800px] zero:w-5/6 py-[100px]">
+        <div className="flex flex-col items-center justify-center xl:w-[800px] lg:w-[600px]  zero:w-5/6 py-[100px]">
           <Image
             src={LogoWitchTurnAround}
             className="lg:w-1/6 zero:w-[20%] h-fit"
             alt="witch"
           />
           <Image src={Logo} className="w-full h-fit" alt="logo" />
-          <div className="mt-7 lg:w-[600px] lg:h-[450px] lg:text-[20px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] lg:bg-cover zero:bg-contain bg-no-repeat flex flex-col items-center text-center ">
+          <div className="mt-7 xl:w-[600px] xl:h-[450px] xl:text-[20px] lg:w-[500px] lg:h-[333px] lg:text-[15px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] lg:bg-cover zero:bg-contain bg-no-repeat flex flex-col items-center text-center ">
             <div className="mr-3 flex flex-col justify-center items-center">
               <div className="flex">
                 <button
@@ -34,7 +34,7 @@ export default function Home() {
                 >
                   <Image
                     src={About}
-                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   About
@@ -47,7 +47,7 @@ export default function Home() {
                 >
                   <Image
                     src={OurService}
-                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Our Service
@@ -61,7 +61,7 @@ export default function Home() {
                 >
                   <Image
                     src={Regulatory}
-                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Regulatory
@@ -76,7 +76,7 @@ export default function Home() {
                 >
                   <Image
                     src={PressReleases}
-                    className="lg:w-[95px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Press Releases
@@ -90,7 +90,7 @@ export default function Home() {
                 >
                   <Image
                     src={Certification}
-                    className="lg:w-[95px] zero:w-[50px] lg:my-3 zero:my-[5.5px] mx-10 h-fit my-3"
+                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] xl:my-3 lg:my-0 zero:my-[5.5px] mx-10 h-fit"
                     alt="logo"
                   />
                   Certification
