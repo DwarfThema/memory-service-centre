@@ -142,7 +142,7 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:w-[120px] zero:w-[10px] lg:h-[0px] zero:h-[20px] " />
-            <div className="lg:w-[50%] zero:w-full lg:text-2xl zero:text-md lg:text-right zero:text-left">
+            <div className="lg:w-full zero:w-full lg:text-2xl zero:text-md lg:text-right zero:text-left">
               <form>
                 <div className="flex items-center">
                   <span className="block mr-4 w-[120px]">Name</span>
@@ -161,8 +161,9 @@ export default function Home() {
                   <input
                     type="date"
                     name="BirthData"
-                    placeholder="123123"
                     className="border-2 border-gray-400 border-solid px-2 w-[270px]"
+                    required
+                    pattern="\d{4}-\d{2}-\d{2}"
                     onChange={onDobChange}
                   />
                 </div>
