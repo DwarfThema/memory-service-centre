@@ -291,7 +291,9 @@ export default function Home() {
           <div className="lg:h-[55%] lg:w-[55%] zero:h-[80%] zero:w-[85%] zero:px-5 zero:pt-2 bg-contain bg-no-repeat bg-center  flex text-center justify-center items-center flex-col text-white text-2xl">
             <>
               <Image src={img} width={310} height={460} alt="IDCARD" />
-              DOWNLOAD CARD
+              <a href={img} download={`${name} ID CARD`}>
+                DOWNLOAD CARD
+              </a>
             </>
           </div>
         </div>
