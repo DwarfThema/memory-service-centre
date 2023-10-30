@@ -9,14 +9,10 @@ import Link from "next/link";
 export default function LoadingScreen() {
   const { progress, loaded } = useProgress();
   const [loading, setLoading] = useState(false);
-  const [transitionEnd, setTransitionEnd] = useState(false);
 
   useEffect(() => {
     if (loaded >= 52) {
       setLoading(true);
-      setTimeout(() => {
-        setTransitionEnd(true);
-      }, 5500);
     }
   }, [progress, loaded]);
 
@@ -24,8 +20,7 @@ export default function LoadingScreen() {
     <div
       className={clsstail(
         "absolute bg-white w-screen h-screen flex flex-col justify-center items-center text-black ",
-        loading ? "opacity-0" : "opacity-100",
-        transitionEnd ? "z-0 hidden" : "z-20"
+        loading ? "z-0 hidden" : "z-20"
       )}
     >
       <div className="flex flex-col items-center justify-center w-3/5 ">
