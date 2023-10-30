@@ -21,15 +21,15 @@ export default function Home() {
   return (
     <main className="w-screen h-screen flex items-center flex-col">
       <WebLayout isHome={false} url={url}>
-        <div className="flex flex-col items-center xl:mt-[280px] lg:mt-36 lg:w-6/12 zero:mt-20 zero:w-10/12 ">
+        <div className="flex flex-col items-center xl:mt-[280px] md:mt-36 md:w-6/12 zero:mt-20 zero:w-10/12 ">
           <Image
             src={OurService}
-            className="lg:w-[12%] zero:w-[25%] "
+            className="md:w-[12%] zero:w-[25%] "
             alt="OurService"
           />
-          <span className="lg:text-[40px] zero:text-[30px] ">Our Service</span>
+          <span className="md:text-[40px] zero:text-[30px] ">Our Service</span>
           {lang ? (
-            <div className="lg:mt-10 zero:mt-5 w-full grid grid-cols-3 gap-6">
+            <div className="md:mt-10 zero:mt-5 w-full grid grid-cols-3 gap-6">
               <button
                 className="flex flex-col items-start"
                 onClick={() => {
@@ -41,7 +41,7 @@ export default function Home() {
                   className="w-full"
                   alt="ArtificialHippocampus"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold ">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold ">
                   인공 해마
                 </span>
               </button>{" "}
@@ -56,7 +56,7 @@ export default function Home() {
                   className="w-full"
                   alt="PlaceboEffect"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   플라시보 효과
                 </span>
               </button>{" "}
@@ -71,7 +71,7 @@ export default function Home() {
                   className="w-full"
                   alt="ErasingTraumaticMemory"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   트라우마 기억 지우기
                 </span>
               </button>{" "}
@@ -86,7 +86,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryRecovery"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   기억 복구
                 </span>
               </button>{" "}
@@ -101,7 +101,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryBooster"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   기억 부스터
                 </span>
               </button>{" "}
@@ -116,7 +116,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryDeliveryService"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   기억 선물
                 </span>
               </button>{" "}
@@ -131,7 +131,7 @@ export default function Home() {
                   className="w-full"
                   alt="RelationshipTherapy"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   관계 회복 테라피
                 </span>
               </button>
@@ -146,7 +146,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryPreservation"
                 />
-                <span className="text-center w-full block lg:text-[22px] zero:text-[13px] zero:font-extrabold">
+                <span className="text-center w-full block md:text-[22px] zero:text-[13px] zero:font-extrabold">
                   기억 보관
                 </span>
               </button>{" "}
@@ -164,7 +164,7 @@ export default function Home() {
                   className="w-full"
                   alt="ArtificialHippocampus"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Artificial Hippocampus
                 </span>
               </button>{" "}
@@ -179,7 +179,7 @@ export default function Home() {
                   className="w-full"
                   alt="PlaceboEffect"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Placebo Effect
                 </span>
               </button>{" "}
@@ -194,7 +194,7 @@ export default function Home() {
                   className="w-full"
                   alt="ErasingTraumaticMemory"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Erasing Traumatic Memory
                 </span>
               </button>{" "}
@@ -209,7 +209,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryRecovery"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Recovery
                 </span>
               </button>{" "}
@@ -224,7 +224,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryBooster"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Booster
                 </span>
               </button>{" "}
@@ -239,7 +239,7 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryDeliveryService"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Delivery Service
                 </span>
               </button>{" "}
@@ -254,7 +254,7 @@ export default function Home() {
                   className="w-full"
                   alt="RelationshipTherapy"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Relationship
                   <br />
                   therapy
@@ -271,13 +271,13 @@ export default function Home() {
                   className="w-full"
                   alt="MemoryPreservation"
                 />
-                <span className="text-center w-full block mt-2 lg:text-[22px] zero:text-[15px] zero:font-extrabold">
+                <span className="text-center w-full block mt-2 md:text-[22px] zero:text-[15px] zero:font-extrabold">
                   Memory Preservation
                 </span>
               </button>{" "}
             </div>
           )}
-          <footer className="text-[20px] mt-20 lg:pb-[200px] zero:pb-[100px] ">
+          <footer className="text-[20px] mt-20 md:pb-[200px] zero:pb-[100px] ">
             © dasomsong 2023
           </footer>
         </div>

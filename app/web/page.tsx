@@ -29,19 +29,19 @@ export default function Web() {
     <main className="w-screen h-screen flex items-center justify-center">
       <WhiteNoise />
       <WebLayout isHome={true} isNotice={false} main={true} url={url}>
-        <div className="flex flex-col items-center justify-center lg:w-1/2 zero:w-5/6 ">
+        <div className="flex flex-col items-center justify-center md:w-1/2 zero:w-5/6 ">
           <Image
             src={LogoWitchTurnAround}
-            className="lg:w-1/6 zero:w-[20%] h-fit"
+            className="md:w-1/6 zero:w-[20%] h-fit"
             alt="witch"
           />
           <Image src={Logo} className="w-full h-fit" alt="logo" />
           <div className="flex flex-col items-center text-center ">
-            <div className="lg:mt-14 zero:mt-5 lg:text-[40px] zero:text-[30px]">
+            <div className="md:mt-14 zero:mt-5 md:text-[40px] zero:text-[30px]">
               <span className={mainFont.className}>Welcome to M.S.C</span>
             </div>
             <button
-              className="flex items-center lg:mt-1 zero:mt-0 cursor-pointer"
+              className="flex items-center md:mt-1 zero:mt-0 cursor-pointer"
               onClick={() => {
                 setUrl("/web/home");
                 if (audio) {
@@ -52,12 +52,12 @@ export default function Web() {
               }}
             >
               <Image src={Holder} className="w-[60px] h-fit " alt="|" />
-              <div className=" lg:text-[62px] zero:text-[40px]">
+              <div className=" md:text-[62px] zero:text-[40px]">
                 <span className={mainFont.className}>PRESS START</span>
               </div>
               <Image src={Holder} className="w-[60px] h-fit " alt="|" />
             </button>
-            <div className="lg:text-[26px] zero:text-[20px]">
+            <div className="md:text-[26px] zero:text-[20px]">
               <footer className={mainFont.className}>© dasomsong 2023</footer>
             </div>
           </div>

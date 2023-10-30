@@ -43,7 +43,7 @@ export default function WebLayout({
     <>
       <Image
         src={Frame}
-        className="lg:block zero:hidden w-full h-full z-40 pointer-events-none fixed"
+        className="md:block zero:hidden w-full h-full z-40 pointer-events-none fixed"
         alt="frame"
         onLoad={() => (
           <div className="w-screen h-screen z-50 absolute bg-[url('/textures/noise.gif')]" />
@@ -63,14 +63,14 @@ export default function WebLayout({
           >
             <Image
               src={LogoWitchTurnAround}
-              className="fixed lg:left-[10%] lg:top-[15%] lg:w-[6%] zero:left-[5%] zero:top-[5%] zero:w-[14%] z-10"
+              className="fixed md:left-[10%] md:top-[15%] md:w-[6%] zero:left-[5%] zero:top-[5%] zero:w-[14%] z-10"
               alt="home"
             />
           </div>
         )}
 
         {main ? null : (
-          <div className="fixed text-center lg:right-[15%] lg:top-[15%] lg:text-2xl zero:right-[5%] zero:top-[7%] zero:text-xl flex font-bold z-10">
+          <div className="fixed text-center md:right-[15%] md:top-[15%] md:text-2xl zero:right-[5%] zero:top-[7%] zero:text-xl flex font-bold z-10">
             <div
               onClick={() => {
                 setLang(true);
@@ -100,7 +100,7 @@ export default function WebLayout({
           >
             <Image
               src={Notice}
-              className="fixed lg:left-[10%] lg:bottom-[15%] lg:w-[4%] zero:left-[5%] zero:bottom-[5%] zero:w-[10%] z-10"
+              className="fixed md:left-[10%] md:bottom-[15%] md:w-[4%] zero:left-[5%] zero:bottom-[5%] zero:w-[10%] z-10"
               alt="notice"
             />
           </div>

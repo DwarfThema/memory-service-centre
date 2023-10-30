@@ -32,22 +32,22 @@ export default function Home() {
               onClick={() => {
                 setPressView((prev) => !prev);
               }}
-              className="absolute w-screen flex xl:py-[800px] lg:py-[600px] zero:py-[200px] justify-center bg-black bg-opacity-60 z-30  cursor-pointer"
+              className="absolute w-screen flex xl:py-[800px] md:py-[600px] zero:py-[200px] justify-center bg-black bg-opacity-60 z-30  cursor-pointer"
             >
               <PressView pressContents={pressContents} />
             </div>
           ) : null}
 
-          <div className="flex flex-col items-center xl:mt-[280px] lg:mt-36 lg:w-6/12 zero:mt-20 zero:w-screen">
+          <div className="flex flex-col items-center xl:mt-[280px] md:mt-36 md:w-6/12 zero:mt-20 zero:w-screen">
             <Image
               src={PressRelease}
-              className="lg:w-[12%] zero:w-[25%]"
+              className="md:w-[12%] zero:w-[25%]"
               alt="PressRelease"
             />
-            <span className="lg:text-[40px] zero:text-[30px] ">
+            <span className="md:text-[40px] zero:text-[30px] ">
               Press Release
             </span>
-            <div className="lg:mt-20 zero:mt-5 grid grid-cols-1 gap-5">
+            <div className="md:mt-20 zero:mt-5 grid grid-cols-1 gap-5">
               <button
                 className="flex hover:bg-gray-300 p-3"
                 onClick={() => {
@@ -58,11 +58,11 @@ export default function Home() {
                 <Image src={A_1} alt="A_1" className="w-[30%]" />
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     MSC 대표, &quot;부작용에 대한 걱정보다는 개개인의 행복에 더
                     초점을 맞추어주셨으면&quot;
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     2042년 02월 11일
                   </div>
                 </div>
@@ -77,11 +77,11 @@ export default function Home() {
                 <Image src={B_1} alt="B_1" className="w-[30%]" />
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     {`MSC, 기억규제부 (MMR)로부터 세계 최초 기억 조작 기관
 으로 승인`}
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     2042년 07월 03일
                   </div>
                 </div>
@@ -96,11 +96,11 @@ export default function Home() {
                 <Image src={C_1} alt="C_1" className="w-[30%]" />
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     국제뇌협회 이사장 토머스 레이, &quot;기억 조작과 관련된
                     범죄, 규제 방안 최선을 다해 지속적으로 연구할 것&quot;
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     2043년 01월 31일
                   </div>
                 </div>
@@ -116,11 +116,11 @@ export default function Home() {
 
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     MSC, Hippo&campus Co., Ltd와 3000억 규모 인공해마 칩 대규모
                     계약 체결
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     2043년 04월 03일
                   </div>
                 </div>
@@ -136,16 +136,16 @@ export default function Home() {
 
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     {`미국 팝스타 위나 맥카시, “기억 조작은 21세기식 영혼의 디톡스”`}
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     2043년 08월 16일
                   </div>
                 </div>
               </button>
             </div>
-            <div className="text-[20px] lg:mt-20 lg:pb-52 zero:mt-10 zero:pb-[50px]">
+            <div className="text-[20px] md:mt-20 md:pb-52 zero:mt-10 zero:pb-[50px]">
               © dasomsong 2023
             </div>
           </div>
@@ -157,22 +157,22 @@ export default function Home() {
               onClick={() => {
                 setPressView((prev) => !prev);
               }}
-              className="absolute w-screen xl:py-[800px] lg:py-[600px] zero:py-[200px] justify-center bg-black bg-opacity-60 z-30 flex cursor-pointer"
+              className="absolute w-screen xl:py-[800px] md:py-[600px] zero:py-[200px] justify-center bg-black bg-opacity-60 z-30 flex cursor-pointer"
             >
               <PressView pressContents={pressContents} />
             </div>
           ) : null}
 
-          <div className="flex flex-col items-center xl:mt-[280px] lg:mt-36 lg:w-6/12 zero:mt-20 zero:w-screen">
+          <div className="flex flex-col items-center xl:mt-[280px] md:mt-36 md:w-6/12 zero:mt-20 zero:w-screen">
             <Image
               src={PressRelease}
-              className="lg:w-[12%] zero:w-[25%]"
+              className="md:w-[12%] zero:w-[25%]"
               alt="witch"
             />
-            <span className="lg:text-[40px] zero:text-[30px]">
+            <span className="md:text-[40px] zero:text-[30px]">
               Press Release
             </span>
-            <div className="lg:mt-20 zero:mt-5 grid grid-cols-1 gap-5">
+            <div className="md:mt-20 zero:mt-5 grid grid-cols-1 gap-5">
               <button
                 className="flex hover:bg-gray-300 p-3"
                 onClick={() => {
@@ -183,11 +183,11 @@ export default function Home() {
                 <Image src={A_1} alt="A_1" className="w-[30%]" />
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     MSC CEO Highlights Focus on Individual Happiness Over
                     Concerns of Side Effects
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     FEBRUARY 11, 2042
                   </div>
                 </div>
@@ -202,11 +202,11 @@ export default function Home() {
                 <Image src={B_1} alt="B_1" className="w-[30%]" />
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     {`MSC Approved as the World's First Memory Modification
                   Institution by Memory Regulation Bureau (MMR)`}
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     JULY 03, 2042
                   </div>
                 </div>
@@ -221,12 +221,12 @@ export default function Home() {
                 <Image src={C_1} alt="C_1" className="w-[30%]" />
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     Thomas Ray, Chairman of the International Brain Association,
                     Commits to Ongoing Research on Regulations Related to Memory
                     Modification and Crime
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     JANUARY 31, 2043
                   </div>
                 </div>
@@ -242,11 +242,11 @@ export default function Home() {
 
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     MSC Signs a Massive 300 Billion KRW Contract with
                     Hippo&campus Co., Ltd for Artificial Hippocampus Chips
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     APRIL 03, 2043
                   </div>
                 </div>
@@ -262,17 +262,17 @@ export default function Home() {
 
                 <div className="w-[5%]" />
                 <div className="flex flex-col text-left w-[65%] py-2">
-                  <div className="font-bold lg:text-[25px] zero:text-[13px] ">
+                  <div className="font-bold md:text-[25px] zero:text-[13px] ">
                     {`American Pop Star Wina McCarthy said, “Memory Modification is
                   a 21st Century’s Soul Detox”`}
                   </div>
-                  <div className="text-gray-400 font-thin lg:text-[20px] zero:text-[13px] ">
+                  <div className="text-gray-400 font-thin md:text-[20px] zero:text-[13px] ">
                     AUGUST 16, 2043
                   </div>
                 </div>
               </button>
             </div>
-            <div className="text-[20px] lg:mt-20 lg:pb-52 zero:mt-10 zero:pb-[50px]">
+            <div className="text-[20px] md:mt-20 md:pb-52 zero:mt-10 zero:pb-[50px]">
               © dasomsong 2023
             </div>
           </div>
@@ -286,18 +286,18 @@ function PressView({ pressContents }: { pressContents: number }) {
   const [lang, setLang] = useRecoilState(langState);
   return (
     <>
-      <div className="lg:w-[55%] zero:w-[85%] bg-white flex lg:p-20 zero:p-6 flex-col">
-        <span className="lg:text-[28px] zero:text-[20px] font-extrabold">
+      <div className="md:w-[55%] zero:w-[85%] bg-white flex md:p-20 zero:p-6 flex-col">
+        <span className="md:text-[28px] zero:text-[20px] font-extrabold">
           {lang
             ? pressContentsObjKor[pressContents].title
             : pressContentsObjEng[pressContents].title}
         </span>
-        <span className="block lg:text-xl zero:text-md text-gray-400 font-extralight">
+        <span className="block md:text-xl zero:text-md text-gray-400 font-extralight">
           {lang
             ? pressContentsObjKor[pressContents].author
             : pressContentsObjEng[pressContents].author}
         </span>
-        <span className="block lg:text-xl zero:text-md text-gray-400 font-extralight">
+        <span className="block md:text-xl zero:text-md text-gray-400 font-extralight">
           {lang
             ? pressContentsObjKor[pressContents].date
             : pressContentsObjEng[pressContents].date}
@@ -314,13 +314,13 @@ function PressView({ pressContents }: { pressContents: number }) {
               height={350}
               alt="pressPhoto"
             />
-            <span className="text-center lg:text-lg zero:text-sm mt-1 text-gray-400">
+            <span className="text-center md:text-lg zero:text-sm mt-1 text-gray-400">
               {lang
                 ? pressContentsObjKor[pressContents].pictureCaption
                 : pressContentsObjEng[pressContents].pictureCaption}
             </span>
           </div>
-          <span className="lg:text-xl zero:text-md mr-6 whitespace-pre-line">
+          <span className="md:text-xl zero:text-md mr-6 whitespace-pre-line">
             {lang
               ? pressContentsObjKor[pressContents].contents
               : pressContentsObjEng[pressContents].contents}

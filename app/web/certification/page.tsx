@@ -130,17 +130,17 @@ export default function Home() {
   return (
     <main className="w-screen h-screen flex items-center flex-col">
       <WebLayout isHome={false} url={url}>
-        <div className="flex flex-col items-center xl:mt-[280px] lg:mt-36 lg:w-6/12 zero:mt-20 zero:w-10/12">
+        <div className="flex flex-col items-center xl:mt-[280px] md:mt-36 md:w-6/12 zero:mt-20 zero:w-10/12">
           <Image
             src={Certification}
-            className="lg:w-[12%] zero:w-[25%] "
+            className="md:w-[12%] zero:w-[25%] "
             alt="Certification"
           />
-          <span className="lg:text-[40px] zero:text-[30px] ">
+          <span className="md:text-[40px] zero:text-[30px] ">
             Certification
           </span>
-          <div className="mt-10 w-[90%] flex lg:flex-row zero:flex-col lg:items-start lg:justify-center zero:items-center ">
-            <div className="lg:w-[310px] zero:w-[90%] flex justify-center items-center">
+          <div className="mt-10 w-[90%] flex md:flex-row zero:flex-col md:items-start md:justify-center zero:items-center ">
+            <div className="md:w-[310px] zero:w-[90%] flex justify-center items-center">
               <div className="w-[310px] h-[460px] drop-shadow-xl">
                 <div
                   id="CardArea"
@@ -204,8 +204,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="lg:w-[120px] zero:w-[10px] lg:h-[0px] zero:h-[20px] " />
-            <div className="lg:w-[500px] zero:w-full lg:text-2xl zero:text-md lg:text-right zero:text-left">
+            <div className="md:w-[120px] zero:w-[10px] md:h-[0px] zero:h-[20px] " />
+            <div className="md:w-[500px] zero:w-full md:text-2xl zero:text-md md:text-right zero:text-left">
               <div className="flex items-center">
                 <span className="block mr-4 w-[120px]">Name</span>
                 <input
@@ -240,10 +240,10 @@ export default function Home() {
               </div>
 
               <div className="flex mt-4">
-                <span className="block lg:mr-4 zero:mr-0 w-[120px]">
+                <span className="block md:mr-4 zero:mr-0 w-[120px]">
                   Gender
                 </span>
-                <div className="grid grid-cols-2 lg:gap-x-28 zero:gap-x-10 lg:gap-y-3 zero:gap-y-1 w-[200px]">
+                <div className="grid grid-cols-2 md:gap-x-28 zero:gap-x-10 md:gap-y-3 zero:gap-y-1 w-[200px]">
                   <label className="w-20 h-fit flex items-center">
                     <input
                       type="radio"
@@ -287,11 +287,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center lg:mt-2 zero:mt-3">
-                <span className="block lg:mr-4 zero:mr-0 w-[120px]">Photo</span>
+              <div className="flex items-center md:mt-2 zero:mt-3">
+                <span className="block md:mr-4 zero:mr-0 w-[120px]">Photo</span>
                 <div className="flex w-full justify-center">
                   <button
-                    className="bg-[#C0C0C0] border-[#929292] border-2 text-black lg:px-7 zero:px-[70px] rounded-sm"
+                    className="bg-[#C0C0C0] border-[#929292] border-2 text-black md:px-7 zero:px-[70px] rounded-sm"
                     onClick={onButtonClick}
                   >
                     Upload
@@ -306,17 +306,17 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex justify-center lg:mt-8 zero:mt-7">
+              <div className="flex justify-center md:mt-8 zero:mt-7">
                 <button
                   type="submit"
-                  className="bg-[#C63484] text-white lg:px-4 zero:px-[120px] py-1 rounded-md"
+                  className="bg-[#C63484] text-white md:px-4 zero:px-[120px] py-1 rounded-md"
                   onClick={captureCardArea}
                 >
                   Generate
                 </button>
               </div>
               {lang ? (
-                <div className="text-sm flex text-left lg:mt-5 zero:mt-7">
+                <div className="text-sm flex text-left md:mt-5 zero:mt-7">
                   *저는 MSC와 기억 조작 관련 헌법에 기재된 모든 위반사항에 대해
                   책임을 질 수 있음을 동의합니다.
                   <br />
@@ -337,7 +337,7 @@ export default function Home() {
               )}
             </div>
           </div>
-          <footer className="text-[20px] mt-20 lg:pb-52 zero:pb-20">
+          <footer className="text-[20px] mt-20 md:pb-52 zero:pb-20">
             © dasomsong 2023
           </footer>
         </div>
@@ -349,7 +349,7 @@ export default function Home() {
           }}
           className="fixed w-screen h-screen bg-black bg-opacity-60 z-20 flex items-center justify-center cursor-pointer"
         >
-          <div className="lg:h-[55%] lg:w-[55%] zero:h-[80%] zero:w-[85%] zero:px-5 zero:pt-2 bg-contain bg-no-repeat bg-center  flex text-center justify-center items-center flex-col text-white text-2xl">
+          <div className="md:h-[55%] md:w-[55%] zero:h-[80%] zero:w-[85%] zero:px-5 zero:pt-2 bg-contain bg-no-repeat bg-center  flex text-center justify-center items-center flex-col text-white text-2xl">
             <>
               <Image src={img} width={310} height={460} alt="IDCARD" />
               <a href={img} download={`${name} ID CARD`}>

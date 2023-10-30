@@ -16,14 +16,14 @@ export default function Home() {
   return (
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={true} url={url}>
-        <div className="flex flex-col items-center justify-center xl:w-[800px] lg:w-[600px]  zero:w-5/6 py-[100px]">
+        <div className="flex flex-col items-center justify-center xl:w-[600px] md:w-[500px]  zero:w-5/6 py-[100px]">
           <Image
             src={LogoWitchTurnAround}
-            className="lg:w-1/6 zero:w-[20%] h-fit"
+            className="xl:w-[100px] md:w-[100px] zero:w-[90px] h-fit"
             alt="witch"
           />
           <Image src={Logo} className="w-full h-fit" alt="logo" />
-          <div className="mt-7 xl:w-[600px] xl:h-[400px] xl:text-[20px] lg:w-[500px] lg:h-[333px] lg:text-[15px] zero:w-[350px] zero:h-[300px] lg:pt-[80px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] lg:bg-cover zero:bg-contain bg-no-repeat flex flex-col items-center text-center ">
+          <div className="mt-7 xl:w-[458.5px] xl:h-[308px] xl:text-[20px] md:w-[450px] md:h-[300px] md:text-[15px] zero:w-[350px] zero:h-[300px] xl:pt-[55px] md:pt-[60px] zero:pt-[40px] bg-[url('/textures/web-home/Base.png')] md:bg-cover zero:bg-contain bg-no-repeat flex flex-col items-center text-center ">
             <div className="mr-3 flex flex-col justify-center items-center">
               <div className="flex">
                 <button
@@ -34,7 +34,7 @@ export default function Home() {
                 >
                   <Image
                     src={About}
-                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[70px] md:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   About
@@ -47,7 +47,7 @@ export default function Home() {
                 >
                   <Image
                     src={OurService}
-                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[70px] md:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Our Service
@@ -61,7 +61,7 @@ export default function Home() {
                 >
                   <Image
                     src={Regulatory}
-                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[70px] md:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Regulatory
@@ -69,28 +69,28 @@ export default function Home() {
               </div>
               <div className="flex mt-5">
                 <button
-                  className="flex items-center flex-col lg:mt-1 zero:mt-0 cursor-pointer"
+                  className="flex items-center flex-col md:mt-1 zero:mt-0 cursor-pointer"
                   onClick={() => {
                     setUrl("/web/pressreleases");
                   }}
                 >
                   <Image
                     src={PressReleases}
-                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] mx-10 h-fit"
+                    className="xl:w-[70px] md:w-[65px] zero:w-[50px] mx-10 h-fit"
                     alt="logo"
                   />
                   Press Releases
                 </button>
 
                 <button
-                  className="flex items-center flex-col lg:mt-1 zero:mt-0 cursor-pointer"
+                  className="flex items-center flex-col md:mt-1 zero:mt-0 cursor-pointer"
                   onClick={() => {
                     setUrl("/web/certification");
                   }}
                 >
                   <Image
                     src={Certification}
-                    className="xl:w-[95px] lg:w-[65px] zero:w-[50px] xl:my-3 lg:my-0 zero:my-[5.5px] mx-10 h-fit"
+                    className="xl:w-[80px] md:w-[65px] zero:w-[50px] xl:my-1 md:my-0 zero:my-[5.5px] mx-10 h-fit"
                     alt="logo"
                   />
                   Certification

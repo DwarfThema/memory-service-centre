@@ -12,7 +12,7 @@ export default function About() {
     <main className="w-screen h-screen  flex items-center justify-center flex-col">
       <WebLayout isHome={false}>
         <div className="flex flex-col items-center justify-center w-3/4 font-dos text-center">
-          <div className="lg:text-[30px] zero:text-[16px] ">
+          <div className="md:text-[30px] zero:text-[16px] ">
             {lang ? (
               <>
                 <div>
@@ -37,8 +37,8 @@ export default function About() {
               </>
             )}
           </div>
-          <div className="lg:my-12 zero:my-5 border-t-2 border-black w-full " />
-          <div className="lg:text-[25px] zero:text-[16px] flex flex-col justify-center items-center text-center">
+          <div className="md:my-12 zero:my-5 border-t-2 border-black w-full " />
+          <div className="md:text-[25px] zero:text-[16px] flex flex-col justify-center items-center text-center">
             <div className="flex justify-center items-center">
               <div>© dasomsong 2023</div>
               <Link href="https://www.instagram.com/sseeoul/" target="_blank">

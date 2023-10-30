@@ -35,14 +35,14 @@ export default function Home() {
             <Reservation />
           </div>
         ) : null}
-        <div className="flex flex-col items-center xl:mt-[280px] lg:mt-36 lg:w-6/12 zero:mt-20 zero:w-screen">
+        <div className="flex flex-col items-center xl:mt-[280px] md:mt-36 md:w-6/12 zero:mt-20 zero:w-screen">
           <Image
             src={Regulatory}
-            className="lg:w-[12%] zero:w-[25%]"
+            className="md:w-[12%] zero:w-[25%]"
             alt="Regulatory"
           />
-          <span className="lg:text-[40px] zero:text-[30px] ">Regulatory</span>
-          <div className="window-body lg:pt-[70px] zero:pt-[10px] w-full">
+          <span className="md:text-[40px] zero:text-[30px] ">Regulatory</span>
+          <div className="window-body md:pt-[70px] zero:pt-[10px] w-full">
             <menu
               role="tablist"
               className="items-end xl:text-lg zero:text-base"
@@ -56,7 +56,7 @@ export default function Home() {
                     setTab3State(false);
                     setTab4State(false);
                   }}
-                  className="lg:px-8 zero:px-1"
+                  className="md:px-8 zero:px-1"
                 >
                   {lang ? <>기억 법률</> : <>Memory Regulatory (Law)</>}
                 </a>
@@ -106,7 +106,7 @@ export default function Home() {
             </menu>
             <div className="window" role="tabpanel">
               <div className="window-body text-lg">
-                <div className="py-8 lg:px-8 zero:px-2">
+                <div className="py-8 md:px-8 zero:px-2">
                   {lang ? (
                     tab1State ? (
                       <div className="font-dos font-extrabold">
@@ -116,7 +116,7 @@ export default function Home() {
                         <br />
                         <br />
 
-                        <div className="text-[17px] bg-white lg:px-3 zero:px-4 py-3">
+                        <div className="text-[17px] bg-white md:px-3 zero:px-4 py-3">
                           제 1조 <br />
                           &nbsp;&nbsp;&nbsp;모든 기억 조작은국가에서 통제하며,
                           시행되는 모든 기억 조작을 시스템에 기록하여 30년간
@@ -198,12 +198,12 @@ export default function Home() {
                         </span>
                         <br />
                         <br />
-                        <div className="text-[17px] bg-white lg:px-10 zero:px-3 py-1">
+                        <div className="text-[17px] bg-white md:px-10 zero:px-3 py-1">
                           <div className="flex justify-center items-center my-10">
                             <Image
                               src={Minister}
                               alt="minister of memory regulatory"
-                              className="lg:w-[50%] zero:w-[80%]"
+                              className="md:w-[50%] zero:w-[80%]"
                             />
                           </div>
                           MMR은 &quot;Memory Modification Regulations&quot;의
@@ -212,7 +212,7 @@ export default function Home() {
                           발생할 수 있는 윤리적, 법적, 및 사회적 문제를
                           규제합니다. 이 기관은 다음과 같은 주요 역할을
                           수행합니다:
-                          <ul className=" list-disc list-outside lg:px-10 zero:px-5 py-5 my-5">
+                          <ul className=" list-disc list-outside md:px-10 zero:px-5 py-5 my-5">
                             <li>
                               라이선스 발급 및 감독: 기억 조작 기술을 개발하거나
                               사용하기 위해서는 MMR로부터 라이선스를 받아야
@@ -251,7 +251,7 @@ export default function Home() {
                         <span className="font-extrabold text-[20px] block py-1 mt-3">
                           잠깐만요 !
                         </span>
-                        <div className="text-[17px] bg-white lg:px-10 zero:px-3  py-3">
+                        <div className="text-[17px] bg-white md:px-10 zero:px-3  py-3">
                           기억 조작 서비스 결제 후 MM 코드를 받으셨나요? 받지
                           못했다면 메모리 규제부(MMR) 사이트를 방문하여 기억
                           조작 플랜을 신청하세요. 플랜 신청이 거부되지 않는 한
@@ -264,7 +264,7 @@ export default function Home() {
                         <span className="font-extrabold text-[20px] block py-1 mt-3">
                           잠깐만요 !
                         </span>
-                        <div className="text-[17px] bg-white lg:px-10 zero:px-3 py-3">
+                        <div className="text-[17px] bg-white md:px-10 zero:px-3 py-3">
                           기억 시술사의 ID 카드를 확인하셨나요? 시술 전에
                           시술사의 ID 카드를 보여달라고 요청하세요. <br />
                           메모리 규제부(MMR)의 인증을 받은 것이어야 합니다. 또한
@@ -275,14 +275,14 @@ export default function Home() {
                       </div>
                     ) : tab3State ? (
                       <div className="font-dos font-extrabold">
-                        <div className="text-[17px] bg-white lg:px-10 zero:px-0 py-1">
-                          <div className="flex my-10 lg:flex-row zero:flex-col zero:items-center  ">
+                        <div className="text-[17px] bg-white md:px-10 zero:px-0 py-1">
+                          <div className="flex my-10 md:flex-row zero:flex-col zero:items-center  ">
                             <Image
                               src={FigureMemory}
                               alt="minister of memory regulatory"
-                              className="lg:w-[30%] zero:w-[60%] "
+                              className="md:w-[30%] zero:w-[60%] "
                             />
-                            <span className="ml-5 lg:mt-0 zero:mt-10 ">
+                            <span className="ml-5 md:mt-0 zero:mt-10 ">
                               모든 시술 내역은 기록되어 30년 동안 보관됩니다.
                               이는 정부의 규제를 받게 됩니다. 하지만 걱정하지
                               마세요! <br /> 회원님이 기록 열람을 신청하지 않는
@@ -302,13 +302,13 @@ export default function Home() {
                           </span>
                           <br />
                           <div className="text-[17px] bg-white px-10 py-1 mt-1">
-                            <div className="flex my-10 lg:flex-row zero:flex-col ">
+                            <div className="flex my-10 md:flex-row zero:flex-col ">
                               <Image
                                 src={TheseusSyndrome}
                                 alt="minister of memory regulatory"
                                 className="w-[450px] h-fit"
                               />
-                              <span className="lg:ml-5 lg:mt-0 zero:mt-8 zero:0 ">
+                              <span className="md:ml-5 md:mt-0 zero:mt-8 zero:0 ">
                                 테세우스가 타고 왔던 배의 판자를 점차 다른
                                 판자를 갈아 끼우다 보면 어느 시점에는 테세우스가
                                 있었던 원래의 배의 조각은 하나도 남지 않게
@@ -329,13 +329,13 @@ export default function Home() {
                           </span>
                           <br />
                           <div className="text-[17px] bg-white px-10 py-1 mt-1">
-                            <div className="flex my-10 lg:flex-row zero:flex-col">
+                            <div className="flex my-10 md:flex-row zero:flex-col">
                               <Image
                                 src={Memorycomparison}
                                 alt="minister of memory regulatory"
                                 className="w-[400px] h-fit"
                               />
-                              <span className="lg:ml-5 lg:mt-0 zero:mt-8 zero:0">
+                              <span className="md:ml-5 md:mt-0 zero:mt-8 zero:0">
                                 기존 기억을 대체하는 인공해마 수술이나 기억 제거
                                 혹은 기억 추가를 통한 기억 조작 시, 기억 조작
                                 이후의 기억과 기존 기억이 50% 이상 차이나지
@@ -455,12 +455,12 @@ export default function Home() {
                       </span>
                       <br />
                       <br />
-                      <div className="text-[17px] bg-white lg:px-10 zero:px-3 py-1">
+                      <div className="text-[17px] bg-white md:px-10 zero:px-3 py-1">
                         <div className="flex justify-center items-center my-10">
                           <Image
                             src={Minister}
                             alt="minister of memory regulatory"
-                            className="lg:w-[50%] zero:w-[80%]"
+                            className="md:w-[50%] zero:w-[80%]"
                           />
                         </div>
                         MMR, an abbreviation for &quot;Memory Modification
@@ -470,7 +470,7 @@ export default function Home() {
                         issues that may arise during the use of memory-related
                         technologies. This institution performs the following
                         key roles:
-                        <ul className=" list-disc list-outside lg:px-10 zero:px-5 py-5 my-5">
+                        <ul className=" list-disc list-outside md:px-10 zero:px-5 py-5 my-5">
                           <li>
                             Licensing and Oversight: To develop or use memory
                             manipulation technologies, one must obtain a license
@@ -514,7 +514,7 @@ export default function Home() {
                       <span className="font-extrabold text-[20px] block py-1 mt-3">
                         WAIT !
                       </span>
-                      <div className="text-[17px] bg-white lg:px-10 zero:px-3  py-3">
+                      <div className="text-[17px] bg-white md:px-10 zero:px-3  py-3">
                         Did you get the MM code after the purchase? If not,
                         visit Minister of Memory Regulatory (MMR) site, and
                         apply your modifying-memory plan. You can get the MM
@@ -527,7 +527,7 @@ export default function Home() {
                       <span className="font-extrabold text-[20px] block py-1 mt-3">
                         WAIT !
                       </span>
-                      <div className="text-[17px] bg-white lg:px-10 zero:px-3 py-3">
+                      <div className="text-[17px] bg-white md:px-10 zero:px-3 py-3">
                         Did you check the ID card of your Memory Technician?{" "}
                         <br />
                         Ask him/her to show his/her ID card. It should be
@@ -540,14 +540,14 @@ export default function Home() {
                     </>
                   ) : tab3State ? (
                     <>
-                      <div className="text-[17px] bg-white lg:px-10 zero:px-0 py-1">
-                        <div className="flex my-10 lg:flex-row zero:flex-col zero:items-center">
+                      <div className="text-[17px] bg-white md:px-10 zero:px-0 py-1">
+                        <div className="flex my-10 md:flex-row zero:flex-col zero:items-center">
                           <Image
                             src={FigureMemory}
                             alt="minister of memory regulatory"
-                            className="lg:w-[30%] zero:w-[60%]"
+                            className="md:w-[30%] zero:w-[60%]"
                           />
-                          <span className="ml-5 lg:mt-0 zero:mt-10">
+                          <span className="ml-5 md:mt-0 zero:mt-10">
                             All the Modification details are recorded and kept
                             for 30 years. It will be regulated by the
                             government. But don’t be worried! <br />
@@ -567,7 +567,7 @@ export default function Home() {
                         </span>
                         <br />
                         <div className="text-[17px] bg-white px-10 py-1 mt-1">
-                          <div className="flex my-10 lg:flex-row zero:flex-col">
+                          <div className="flex my-10 md:flex-row zero:flex-col">
                             <div>
                               <Image
                                 src={TheseusSyndrome}
@@ -575,7 +575,7 @@ export default function Home() {
                                 className="w-[450px] h-fit"
                               />
                             </div>
-                            <span className="lg:ml-5 lg:mt-0 zero:mt-8 zero:0">
+                            <span className="md:ml-5 md:mt-0 zero:mt-8 zero:0">
                               If you gradually replace the board of the ship
                               that Theseus had been on with the other board, at
                               some point, none of the pieces of the original
@@ -596,7 +596,7 @@ export default function Home() {
                         </span>
                         <br />
                         <div className="text-[17px] bg-white px-10 py-1 mt-1">
-                          <div className="flex my-10 lg:flex-row zero:flex-col">
+                          <div className="flex my-10 md:flex-row zero:flex-col">
                             <div>
                               <Image
                                 src={Memorycomparison}
@@ -604,7 +604,7 @@ export default function Home() {
                                 className="w-[600px] h-fit"
                               />
                             </div>
-                            <span className="lg:ml-5 lg:mt-0 zero:mt-8 zero:0">
+                            <span className="md:ml-5 md:mt-0 zero:mt-8 zero:0">
                               The Memory Equivalence Assessment is conducted to
                               ascertain that alterations made to memories
                               through procedures such as artificial hippocampal
@@ -628,7 +628,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <footer className="text-[20px] mt-20 lg:pb-[200px] zero:pb-[100px]">
+          <footer className="text-[20px] mt-20 md:pb-[200px] zero:pb-[100px]">
             © dasomsong 2023
           </footer>
         </div>
