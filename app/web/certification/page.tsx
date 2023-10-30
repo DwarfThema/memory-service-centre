@@ -63,19 +63,65 @@ export default function Home() {
     setGender(e.target.value);
   };
 
-  function submitOn() {
-    console.log("isisis");
-
-    setMotal(true);
-  }
-
   const captureCardArea = async (e: FormEvent) => {
     e.preventDefault();
     const cardArea = document.getElementById("CardArea");
-    if (cardArea) {
-      const canvas = await html2canvas(cardArea);
+    const cardTextArea = document.getElementById("CardTextArea");
+    const nameArea = document.getElementById("NameArea");
+    const dobArea = document.getElementById("DOBArea");
+    const genderArea = document.getElementById("GenderArea");
+    const photoArea = document.getElementById("PhotoDivArea");
+
+    if (
+      cardArea &&
+      cardTextArea &&
+      nameArea &&
+      dobArea &&
+      genderArea &&
+      photoArea
+    ) {
+      // 1. Backup the original class values
+      const originalClasses = cardArea.className;
+      const originTextClass = cardTextArea.className;
+      const originNameClass = nameArea.className;
+      const originDobClass = dobArea.className;
+      const originGenderClass = genderArea.className;
+      const originPhotoClass = photoArea.className;
+
+      // 2. Change the size classes
+      cardArea.className = originalClasses
+        .replace("w-[310px]", "w-[620px]")
+        .replace("h-[460px]", "h-[920px]");
+
+      cardTextArea.className = originTextClass
+        .replace("w-[190px]", "w-[380px]")
+        .replace("mt-[185px]", "mt-[390px]")
+        .replace("ml-[93px]", "ml-[186px]")
+        .replace("text-xl", "text-4xl");
+
+      nameArea.className = originNameClass.replace("h-[32px]", "h-[63px]");
+      dobArea.className = originDobClass.replace("h-[31px]", "h-[65px]");
+      genderArea.className = originGenderClass.replace("h-[31px]", "h-[75px]");
+      photoArea.className = originPhotoClass
+        .replace("w-[145px]", "w-[290px]")
+        .replace("h-[190px]", "h-[380px]")
+        .replace("mr-[200px]", "mr-[400px]");
+
+      // Re-render the component to reflect the changes
+      await new Promise((resolve) => setTimeout(resolve));
+
+      // 3. Capture using html2canvas
+      const canvas = await html2canvas(cardArea, { scale: 2 });
       const imgData = canvas.toDataURL("image/png");
       setImg(imgData);
+
+      // 4. Revert to the original class values
+      cardArea.className = originalClasses;
+      cardTextArea.className = originTextClass;
+      nameArea.className = originNameClass;
+      dobArea.className = originDobClass;
+      genderArea.className = originGenderClass;
+      photoArea.className = originPhotoClass;
     }
 
     setMotal(true);
@@ -101,13 +147,16 @@ export default function Home() {
                   className="w-[310px] h-[460px] p-4 bg-[url('/textures/certification/certificateCard.jpeg')] bg-contain bg-no-repeat flex flex-col"
                 >
                   {selectedImage ? (
-                    <div className="flex justify-center items-center w-[145px] h-[190px] mr-[200px] bg-white ">
+                    <div
+                      id="PhotoDivArea"
+                      className="flex justify-center items-center w-[145px] h-[190px] mr-[200px] bg-white "
+                    >
                       <Image
                         src={selectedImage}
                         alt="selectedImage"
                         width={145}
                         height={190}
-                        className="w-[145px] h-[190px] object-contain"
+                        className="w-[290px] h-[380px] object-contain"
                       />
                     </div>
                   ) : (
@@ -125,18 +174,30 @@ export default function Home() {
                       />
                     </div>
                   )}
-                  <div className="absolute  flex flex-col items-end justify-end w-[190px] mt-[185px] ml-[93px] text-xl">
-                    <div className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1 ">
+                  <div
+                    id="CardTextArea"
+                    className="absolute  flex flex-col items-end justify-end w-[190px] mt-[185px] ml-[93px] text-xl"
+                  >
+                    <div
+                      id="NameArea"
+                      className="text-right w-[190px] h-[32px] whitespace-nowrap line-clamp-1 "
+                    >
                       <span className={mainFont.className}>
                         {name ? name : <br />}
                       </span>
                     </div>
-                    <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
+                    <div
+                      id="DOBArea"
+                      className=" h-[31px] text-right whitespace-nowrap line-clamp-1"
+                    >
                       <span className={mainFont.className}>
                         {dob ? dob : <br />}
                       </span>
                     </div>
-                    <div className=" h-[31px] text-right whitespace-nowrap line-clamp-1">
+                    <div
+                      id="GenderArea"
+                      className=" h-[31px] text-right whitespace-nowrap line-clamp-1"
+                    >
                       <span className={mainFont.className}>{gender}</span>
                     </div>
                   </div>
@@ -230,7 +291,7 @@ export default function Home() {
                 <span className="block lg:mr-4 zero:mr-0 w-[120px]">Photo</span>
                 <div className="flex w-full justify-center">
                   <button
-                    className="bg-[#C0C0C0] border-[#929292] border-2 text-black lg:px-7 zero:px-[120px] rounded-sm"
+                    className="bg-[#C0C0C0] border-[#929292] border-2 text-black lg:px-7 zero:px-[70px] rounded-sm"
                     onClick={onButtonClick}
                   >
                     Upload
