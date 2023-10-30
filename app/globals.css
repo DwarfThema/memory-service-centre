@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: "DOSGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+main {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: black;
+  user-select: none;
+}
+main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+}
+
+.hover-container {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-4/cur320.ani), auto;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
+  }
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none; /* IE and 엣지 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
