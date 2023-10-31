@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import RecoilRootProvider from "./recoilRootProvider";
 import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "./src/analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.memory-service-centre.com"),
@@ -58,6 +59,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-dos scrollbar-hide bg-white">
         <Analytics />
+        <GoogleAnalytics />
         <RecoilRootProvider>{children}</RecoilRootProvider>
       </body>
     </html>
