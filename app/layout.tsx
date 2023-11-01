@@ -58,9 +58,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-dos scrollbar-hide bg-white">
-        <Analytics />
-        <GoogleAnalytics />
-        <RecoilRootProvider>{children}</RecoilRootProvider>
+        <RecoilRootProvider>
+          <GoogleAnalytics />
+          <Analytics />
+          {children}
+        </RecoilRootProvider>
       </body>
     </html>
   );
